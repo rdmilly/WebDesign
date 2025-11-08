@@ -1404,6 +1404,113 @@ a:focus, button:focus {
 }
 
 /* ========================================
+   SNOWFALL ANIMATION
+======================================== */
+
+.snowfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    user-select: none;
+    pointer-events: none;
+    animation: snowfall linear infinite;
+    opacity: 0;
+}
+
+/* Create depth with different sizes and opacities */
+.snowflake.small {
+    font-size: 0.6em;
+    opacity: 0.5;
+}
+
+.snowflake.medium {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+.snowflake.large {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Snowfall animation with gentle swaying */
+@keyframes snowfall {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) translateX(var(--sway)) rotate(360deg);
+    }
+}
+
+/* Gentle horizontal drift for natural movement */
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Subtle rotation for realism */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Blur effect for snowflakes in distance (optional, for performance can be disabled) */
+.snowflake.blur {
+    filter: blur(1px);
+}
+
+/* Reduce snowfall on mobile for performance */
+@media (max-width: 767px) {
+    .snowflake:nth-child(n+20) {
+        display: none;
+    }
+}
+
+/* Pause snowfall in print mode and for reduced motion preference */
+@media print {
+    .snowfall-container {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .snowfall-container {
+        display: none;
+    }
+}
+
+/* ========================================
    PRINT STYLES
 ======================================== */
 

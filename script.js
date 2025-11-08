@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initFormTracking();
     initScrollAnimations();
+    initSnowfall();
 });
 
 // ========================================
@@ -333,6 +334,79 @@ window.addEventListener('load', function() {
         }, 10000);
     }
 });
+
+// ========================================
+// SNOWFALL ANIMATION
+// ========================================
+
+function initSnowfall() {
+    // Check if user prefers reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    // Create snowfall container
+    const snowfallContainer = document.createElement('div');
+    snowfallContainer.className = 'snowfall-container';
+    document.body.appendChild(snowfallContainer);
+
+    // Configuration
+    const snowflakeCount = 50; // Number of snowflakes
+    const snowflakeChars = ['❄', '❅', '❆']; // Different snowflake symbols
+
+    // Generate snowflakes
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+
+        // Random snowflake character
+        snowflake.textContent = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
+
+        // Random size for depth effect
+        const sizes = ['small', 'medium', 'large'];
+        const size = sizes[Math.floor(Math.random() * sizes.length)];
+        snowflake.classList.add(size);
+
+        // Occasionally add blur for depth
+        if (Math.random() > 0.7) {
+            snowflake.classList.add('blur');
+        }
+
+        // Random horizontal position
+        snowflake.style.left = Math.random() * 100 + '%';
+
+        // Random animation duration (10-30 seconds)
+        const duration = Math.random() * 20 + 10;
+        snowflake.style.animationDuration = duration + 's';
+
+        // Random delay for staggered effect
+        const delay = Math.random() * 5;
+        snowflake.style.animationDelay = delay + 's';
+
+        // Random horizontal drift
+        const sway = (Math.random() * 100 - 50) + 'px';
+        snowflake.style.setProperty('--sway', sway);
+
+        return snowflake;
+    }
+
+    // Add initial snowflakes
+    for (let i = 0; i < snowflakeCount; i++) {
+        snowfallContainer.appendChild(createSnowflake());
+    }
+
+    // Continuously add new snowflakes to replace fallen ones
+    setInterval(function() {
+        // Remove old snowflakes that have completed their animation
+        const oldSnowflakes = snowfallContainer.querySelectorAll('.snowflake');
+        if (oldSnowflakes.length > snowflakeCount * 1.5) {
+            oldSnowflakes[0].remove();
+        }
+
+        // Add a new snowflake
+        snowfallContainer.appendChild(createSnowflake());
+    }, 2000); // Add new snowflake every 2 seconds
+}
 
 // ========================================
 // CONSOLE BRANDING (Optional)
