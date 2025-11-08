@@ -185,7 +185,7 @@ function trackFormView() {
 
 function initScrollAnimations() {
     if ('IntersectionObserver' in window) {
-        const animatedElements = document.querySelectorAll('.gallery-item, .service-column, .comparison-column, .testimonial-card, .pricing-tier');
+        const animatedElements = document.querySelectorAll('.gallery-item, .service-column, .comparison-column, .testimonial-card');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
