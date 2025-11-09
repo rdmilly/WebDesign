@@ -341,3 +341,188 @@ window.addEventListener('load', function() {
 console.log('%cPNWLights.com', 'font-size: 24px; font-weight: bold; color: #2C5530;');
 console.log('%cNewberg\'s Premier Holiday Lighting Professionals', 'font-size: 14px; color: #D4AF37;');
 console.log('%cWebsite by Claude Code', 'font-size: 12px; color: #666;');
+// ========================================
+// PROJECT MODAL FUNCTIONALITY
+// ========================================
+
+// Project data with photos and details
+const projectData = {
+    'betty-lou': {
+        title: 'Festive JOY Display',
+        subtitle: 'Residential Installation - Newberg, OR',
+        type: 'Residential',
+        location: 'Newberg, OR',
+        features: ['Custom JOY Letters', 'Tree Wrapping', 'Ground Lighting', 'Lawn Display Elements'],
+        images: [
+            './images/Betty Lou/5.jpg',
+            './images/Betty Lou/1.jpg',
+            './images/Betty Lou/6.jpg',
+            './images/Betty Lou/7.jpg',
+            './images/Betty Lou/2.jpg',
+            './images/Betty Lou/3.jpg'
+        ]
+    },
+    'windsor': {
+        title: 'Tree Wrapped Elegance',
+        subtitle: 'Commercial Installation - Windsor, OR',
+        type: 'Commercial',
+        location: 'Windsor, OR',
+        features: ['Professional Tree Wrapping', 'Warm White Lights', 'Commercial Grade LEDs', 'Multi-Tree Display'],
+        images: [
+            './images/Windsor/Big1.jpg',
+            './images/Windsor/Big 2.jpg',
+            './images/Windsor/Tue Nov 20 2018 15_42_25 GMT-0800.jpg',
+            './images/Windsor/Tue Nov 20 2018 15_46_39 GMT-0800.jpg',
+            './images/Windsor/Tue Nov 20 2018 15_49_17 GMT-0800.jpg',
+            './images/Windsor/Tue Nov 20 2018 15_50_28 GMT-0800.jpg'
+        ]
+    },
+    'best-western': {
+        title: 'Modern Home Display',
+        subtitle: 'Residential Installation',
+        type: 'Residential',
+        location: 'Yamhill County, OR',
+        features: ['Elegant Wreath', 'Modern Architecture Lighting', 'Warm White Color Scheme', 'Front Entry Accent'],
+        images: [
+            './images/Best Western/2.jpg',
+            './images/Best Western/1.jpg',
+            './images/Best Western/3.jpg',
+            './images/Best Western/5.jpg',
+            './images/Best Western/6.jpg',
+            './images/Best Western/7.jpg'
+        ]
+    },
+    'linda-rankin': {
+        title: 'Classic Brick Home',
+        subtitle: 'Residential Installation - Newberg, OR',
+        type: 'Residential',
+        location: 'Newberg, OR',
+        features: ['Roofline Lighting', 'Tree Accent Lights', 'Chimney Decoration', 'Classic White Lights'],
+        images: [
+            './images/Linda Rankin/20201113_182136_HDR.jpg',
+            './images/Linda Rankin/20201113_182154_HDR.jpg',
+            './images/Linda Rankin/20201113_182223_HDR.jpg',
+            './images/Linda Rankin/20201113_182231_HDR.jpg',
+            './images/Linda Rankin/20201113_182258_HDR.jpg',
+            './images/Linda Rankin/20201113_182308_HDR.jpg'
+        ]
+    },
+    'fairgrounds': {
+        title: 'McMinnville Fairgrounds',
+        subtitle: 'Large Commercial Project - McMinnville, OR',
+        type: 'Commercial',
+        location: 'McMinnville, OR',
+        features: ['Large-Scale Installation', 'Multiple Buildings', 'Professional Equipment', 'Community Event Lighting'],
+        images: [
+            './images/Mcminnville Fairgrounds/20181204_135013.jpg',
+            './images/Mcminnville Fairgrounds/20181204_134815_HDR.jpg',
+            './images/Mcminnville Fairgrounds/20181204_135006.jpg',
+            './images/Mcminnville Fairgrounds/20181204_135110_HDR.jpg',
+            './images/Mcminnville Fairgrounds/20181204_135221_HDR.jpg',
+            './images/Mcminnville Fairgrounds/20181204_134934_HDR.jpg'
+        ]
+    },
+    'elks-lodge': {
+        title: 'Elks Lodge Installation',
+        subtitle: 'Commercial Installation',
+        type: 'Commercial',
+        location: 'Yamhill County, OR',
+        features: ['Pathway Lighting', 'Building Accent Lights', 'Team Installation', 'Professional Grade Setup'],
+        images: [
+            './images/Elks Lodge/1.jpg',
+            './images/Elks Lodge/2.jpg',
+            './images/Elks Lodge/3.jpg',
+            './images/Elks Lodge/5.jpg',
+            './images/Elks Lodge/6.jpg',
+            './images/Elks Lodge/7.jpg'
+        ]
+    }
+};
+
+let currentProject = null;
+let currentImageIndex = 0;
+
+function openProjectModal(projectId) {
+    currentProject = projectId;
+    currentImageIndex = 0;
+
+    const project = projectData[projectId];
+    const modal = document.getElementById('project-modal');
+
+    // Set project details
+    document.getElementById('modal-title').textContent = project.title;
+    document.getElementById('modal-subtitle').textContent = project.subtitle;
+    document.getElementById('modal-type').textContent = project.type;
+    document.getElementById('modal-location').textContent = project.location;
+
+    // Set features
+    const featuresList = document.getElementById('modal-features');
+    featuresList.innerHTML = '';
+    project.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        featuresList.appendChild(li);
+    });
+
+    // Load first image
+    loadModalImage(0);
+
+    // Show modal with animation
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+
+    // Reset after animation
+    setTimeout(() => {
+        currentProject = null;
+        currentImageIndex = 0;
+    }, 600);
+}
+
+function loadModalImage(index) {
+    if (!currentProject) return;
+
+    const project = projectData[currentProject];
+    const images = project.images;
+
+    // Ensure index is within bounds
+    currentImageIndex = ((index % images.length) + images.length) % images.length;
+
+    const imgElement = document.getElementById('modal-image');
+    const counter = document.getElementById('image-counter');
+
+    // Remove loaded class for transition
+    imgElement.classList.remove('loaded');
+
+    // Short delay for smooth transition
+    setTimeout(() => {
+        imgElement.src = images[currentImageIndex];
+        imgElement.onload = () => {
+            imgElement.classList.add('loaded');
+        };
+        counter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+    }, 200);
+}
+
+function changeModalImage(direction) {
+    loadModalImage(currentImageIndex + direction);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('project-modal');
+    if (!modal.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+        closeProjectModal();
+    } else if (e.key === 'ArrowLeft') {
+        changeModalImage(-1);
+    } else if (e.key === 'ArrowRight') {
+        changeModalImage(1);
+    }
+});
