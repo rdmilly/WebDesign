@@ -151,35 +151,35 @@
             <p class="section-subtext">Every home tells a different story. We create custom designs that complement your home's architecture and reflect your style.</p>
 
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('./images/BettyLou.jpg');">
+                <div class="gallery-item" data-project="betty-lou" onclick="openProjectModal('betty-lou')">
+                    <div class="gallery-image" style="background-image: url('./images/Betty Lou/5.jpg');">
                     </div>
-                    <p class="gallery-caption">Festive Joy Display in Newberg</p>
+                    <p class="gallery-caption">Festive JOY Display<span class="view-project">View Project →</span></p>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('./images/Justin Brown.jpg');">
+                <div class="gallery-item" data-project="windsor" onclick="openProjectModal('windsor')">
+                    <div class="gallery-image" style="background-image: url('./images/Windsor/Big1.jpg');">
                     </div>
-                    <p class="gallery-caption">Colorful Roofline Display</p>
+                    <p class="gallery-caption">Tree Wrapped Elegance<span class="view-project">View Project →</span></p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-project="best-western" onclick="openProjectModal('best-western')">
+                    <div class="gallery-image" style="background-image: url('./images/Best Western/2.jpg');">
+                    </div>
+                    <p class="gallery-caption">Modern Home Display<span class="view-project">View Project →</span></p>
+                </div>
+                <div class="gallery-item" data-project="linda-rankin" onclick="openProjectModal('linda-rankin')">
                     <div class="gallery-image" style="background-image: url('./images/Linda Rankin/20201113_182136_HDR.jpg');">
                     </div>
-                    <p class="gallery-caption">Classic Elegance in Newberg</p>
+                    <p class="gallery-caption">Classic Brick Home<span class="view-project">View Project →</span></p>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('./images/20201116_181200_HDR.jpg');">
+                <div class="gallery-item" data-project="fairgrounds" onclick="openProjectModal('fairgrounds')">
+                    <div class="gallery-image" style="background-image: url('./images/Mcminnville Fairgrounds/20181204_135013.jpg');">
                     </div>
-                    <p class="gallery-caption">Traditional Display with Wreaths</p>
+                    <p class="gallery-caption">McMinnville Fairgrounds<span class="view-project">View Project →</span></p>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('./images/20181211_174158.jpg');">
+                <div class="gallery-item" data-project="elks-lodge" onclick="openProjectModal('elks-lodge')">
+                    <div class="gallery-image" style="background-image: url('./images/Elks Lodge/1.jpg');">
                     </div>
-                    <p class="gallery-caption">Modern Home Wreath Display</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('./images/20201116_180922_HDR.jpg');">
-                    </div>
-                    <p class="gallery-caption">Professional Installation in Yamhill County</p>
+                    <p class="gallery-caption">Elks Lodge Installation<span class="view-project">View Project →</span></p>
                 </div>
             </div>
 
@@ -616,6 +616,64 @@
             </div>
         </div>
     </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <p class="modal-subtitle" id="modal-subtitle"></p>
+                </div>
+
+                <div class="modal-gallery">
+                    <button class="gallery-nav gallery-prev" onclick="changeModalImage(-1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="modal-image-container">
+                        <img class="modal-image" id="modal-image" src="" alt="Project photo">
+                        <div class="image-counter" id="image-counter"></div>
+                    </div>
+
+                    <button class="gallery-nav gallery-next" onclick="changeModalImage(1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <h4>Project Type</h4>
+                        <p id="modal-type"></p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Location</h4>
+                        <p id="modal-location"></p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Features</h4>
+                        <ul id="modal-features"></ul>
+                    </div>
+                </div>
+
+                <div class="modal-cta">
+                    <button class="cta-button cta-primary" onclick="closeProjectModal(); scrollToForm()">Get a Similar Display - Free Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Jobber Form Script -->
     <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="5074f8e7-aa1f-489a-9907-cc0a0862f9de-422785" form_url="https://clienthub.getjobber.com/client_hubs/5074f8e7-aa1f-489a-9907-cc0a0862f9de/public/work_request/embedded_work_request_form?form_id=422785"></script>
