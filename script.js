@@ -348,11 +348,11 @@ console.log('%cWebsite by Claude Code', 'font-size: 12px; color: #666;');
 // Project data with photos and details
 const projectData = {
     'betty-lou': {
-        title: 'Festive JOY Display',
-        subtitle: 'Residential Installation - Newberg, OR',
-        type: 'Residential',
-        location: 'Newberg, OR',
-        features: ['Custom JOY Letters', 'Tree Wrapping', 'Ground Lighting', 'Lawn Display Elements'],
+        title: 'Betty Lou\'s Baked Goods - JOY Display',
+        subtitle: 'Commercial Manufacturing Plant - McMinnville, OR',
+        type: 'Commercial',
+        location: 'McMinnville, OR',
+        features: ['Custom JOY Letters', 'Tree Wrapping', 'Ground Lighting', '3-Year Installation (2020-2022)', 'Major Manufacturing Facility'],
         images: [
             './images/Betty Lou/5.jpg',
             './images/Betty Lou/1.jpg',
@@ -363,11 +363,11 @@ const projectData = {
         ]
     },
     'windsor': {
-        title: 'Tree Wrapped Elegance',
-        subtitle: 'Commercial Installation - Windsor, OR',
+        title: 'Windward Rental Complex - 30ft Tree',
+        subtitle: 'Commercial Multi-Property Installation - Lake Oswego, OR',
         type: 'Commercial',
-        location: 'Windsor, OR',
-        features: ['Professional Tree Wrapping', 'Warm White Lights', 'Commercial Grade LEDs', 'Multi-Tree Display'],
+        location: 'Lake Oswego, OR',
+        features: ['30-Foot Tall Tree Wrapping', '18 Trees on Street Side', 'Warm White Lights', 'Commercial Grade LEDs', 'Large-Scale Property Display'],
         images: [
             './images/Windsor/Big1.jpg',
             './images/Windsor/Big 2.jpg',
@@ -378,11 +378,11 @@ const projectData = {
         ]
     },
     'best-western': {
-        title: 'Modern Home Display',
-        subtitle: 'Residential Installation',
-        type: 'Residential',
-        location: 'Yamhill County, OR',
-        features: ['Elegant Wreath', 'Modern Architecture Lighting', 'Warm White Color Scheme', 'Front Entry Accent'],
+        title: 'Best Western Hotel Lobby',
+        subtitle: 'Commercial Hotel Installation - McMinnville, OR',
+        type: 'Commercial',
+        location: 'McMinnville, OR',
+        features: ['Hotel Lobby Display', '3-Year Installation (2018-2020)', 'Major Hotel Property', 'Elegant Wreath', 'Front Entry Accent'],
         images: [
             './images/Best Western/2.jpg',
             './images/Best Western/1.jpg',
@@ -393,11 +393,11 @@ const projectData = {
         ]
     },
     'linda-rankin': {
-        title: 'Classic Brick Home',
-        subtitle: 'Residential Installation - Newberg, OR',
-        type: 'Residential',
-        location: 'Newberg, OR',
-        features: ['Roofline Lighting', 'Tree Accent Lights', 'Chimney Decoration', 'Classic White Lights'],
+        title: 'Historic Portland Home',
+        subtitle: 'Certified Historic Building - Portland, OR',
+        type: 'Historic Residential',
+        location: 'Portland, OR',
+        features: ['Certified Historic Building', 'Non-Invasive Installation', 'Concrete Chimney Feature', 'No Structural Attachments', 'Special Care Installation'],
         images: [
             './images/Linda Rankin/20201113_182136_HDR.jpg',
             './images/Linda Rankin/20201113_182154_HDR.jpg',
@@ -408,11 +408,11 @@ const projectData = {
         ]
     },
     'fairgrounds': {
-        title: 'McMinnville Fairgrounds',
-        subtitle: 'Large Commercial Project - McMinnville, OR',
+        title: 'McMinnville Fairgrounds - Historic Outbuilding',
+        subtitle: 'Large Commercial Historic Project - McMinnville, OR',
         type: 'Commercial',
         location: 'McMinnville, OR',
-        features: ['Large-Scale Installation', 'Multiple Buildings', 'Professional Equipment', 'Community Event Lighting'],
+        features: ['Historic Outbuilding', '2-Day Complete Building Wrap', 'Lift Equipment Required', 'Full Building Coverage', 'Large-Scale Installation'],
         images: [
             './images/Mcminnville Fairgrounds/20181204_135013.jpg',
             './images/Mcminnville Fairgrounds/20181204_134815_HDR.jpg',
@@ -423,11 +423,11 @@ const projectData = {
         ]
     },
     'elks-lodge': {
-        title: 'Elks Lodge Installation',
-        subtitle: 'Commercial Installation',
+        title: 'Elks Lodge - Christmas Drive-Through',
+        subtitle: 'Large-Scale Commercial Event Display',
         type: 'Commercial',
         location: 'Yamhill County, OR',
-        features: ['Pathway Lighting', 'Building Accent Lights', 'Team Installation', 'Professional Grade Setup'],
+        features: ['2-Year Installation (2021-2022)', 'Complete Drive-Through Display', '200+ Individual Lit Displays', 'Community Event', 'Large-Scale Property Installation'],
         images: [
             './images/Elks Lodge/1.jpg',
             './images/Elks Lodge/2.jpg',
