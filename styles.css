@@ -723,6 +723,55 @@ section {
     background-color: var(--white);
 }
 
+.google-review-banner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid #e0e0e0;
+}
+
+.google-review-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.google-icon {
+    flex-shrink: 0;
+}
+
+.google-review-text {
+    text-align: left;
+}
+
+.google-stars {
+    color: #FFC107;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.google-rating {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .google-review-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .google-review-text {
+        text-align: center;
+    }
+}
+
 .testimonial-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -989,6 +1038,10 @@ section {
     margin-right: auto;
 }
 
+.availability-notice > div {
+    flex: 1;
+}
+
 .calendar-icon {
     width: 48px;
     height: 48px;
@@ -999,7 +1052,45 @@ section {
 .availability-text {
     font-size: 18px;
     color: var(--text-dark);
+    margin: 0 0 8px 0;
+}
+
+.availability-subtext {
+    font-size: 15px;
+    color: var(--text-medium);
     margin: 0;
+    font-weight: 600;
+}
+
+.urgency-benefit {
+    background-color: var(--white);
+    border: 2px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.urgency-benefit-title {
+    font-size: 20px;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.urgency-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.urgency-benefit-list li {
+    font-size: 16px;
+    color: var(--text-dark);
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .urgency-cta {
