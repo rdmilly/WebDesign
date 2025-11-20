@@ -1,12 +1,12 @@
 /* ========================================
    PNWLights.com - Premium Christmas Light Installation
-   Color Palette:
-   - Primary: Deep forest green #2C5530
-   - Secondary: Warm white/cream #F8F6F0
-   - Accent 1: Rich gold #D4AF37
-   - Accent 2: Deep red #8B1A1A
-   - Trust blue: #2E5B7E
-   - Safety orange: #FF6B35 (for CTAs)
+   Christmas Holiday Color Palette:
+   - Primary: Deep midnight blue #0B1E3D
+   - Secondary: Pure white #FFFFFF
+   - Accent 1: Festive red #DC2626
+   - Accent 2: Golden star #FFD700
+   - Trust blue: #1E3A8A
+   - CTA: Bright red #DC2626 (for CTAs)
 ======================================== */
 
 /* ========================================
@@ -20,18 +20,20 @@
 }
 
 :root {
-    --primary-green: #2C5530;
-    --secondary-cream: #F8F6F0;
-    --accent-gold: #D4AF37;
-    --accent-red: #8B1A1A;
-    --trust-blue: #2E5B7E;
-    --cta-orange: #FF6B35;
+    --primary-blue: #0B1E3D;
+    --secondary-white: #FFFFFF;
+    --accent-gold: #FFD700;
+    --accent-red: #DC2626;
+    --trust-blue: #1E3A8A;
+    --cta-red: #DC2626;
     --text-dark: #1a1a1a;
     --text-medium: #4a4a4a;
     --text-light: #6a6a6a;
     --border-light: #e0e0e0;
     --white: #ffffff;
     --success-green: #2C5530;
+    --christmas-blue: #0B1E3D;
+    --snowflake-white: #FFFFFF;
 }
 
 html {
@@ -126,7 +128,7 @@ button {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 800;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     letter-spacing: -0.5px;
 }
 
@@ -140,14 +142,14 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .phone-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-red);
 }
 
 .phone-icon {
@@ -181,14 +183,14 @@ button {
 }
 
 .cta-primary {
-    background-color: var(--cta-orange);
+    background-color: var(--cta-red);
     color: var(--white);
 }
 
 .cta-primary:hover {
-    background-color: #e85a25;
+    background-color: #B91C1C;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(220, 38, 38, 0.4);
 }
 
 .cta-secondary {
@@ -199,7 +201,7 @@ button {
 
 .cta-secondary:hover {
     background-color: var(--white);
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .header-cta {
@@ -233,8 +235,10 @@ button {
     text-align: center;
     padding: 120px 20px 80px;
     background:
-        linear-gradient(135deg, rgba(44, 85, 48, 0.85) 0%, rgba(26, 58, 31, 0.9) 100%),
+        linear-gradient(135deg, rgba(11, 30, 61, 0.5) 0%, rgba(30, 58, 138, 0.6) 100%),
         url('./images/Pathlights/IMG_20201127_165342499.jpg') center center / cover no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--white);
     overflow: hidden;
 }
@@ -247,9 +251,10 @@ button {
     right: 0;
     bottom: 0;
     background-image:
-        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -258,7 +263,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(11, 30, 61, 0.3);
+    z-index: 0;
 }
 
 .hero-content {
@@ -360,7 +366,7 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-size: 14px;
     font-weight: 600;
 }
@@ -384,7 +390,7 @@ section {
     font-size: 42px;
     font-weight: 800;
     text-align: center;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 20px;
 }
 
@@ -467,7 +473,7 @@ section {
     height: 300px;
     background-size: cover;
     background-position: center;
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
 }
 
 .gallery-caption {
@@ -529,7 +535,7 @@ section {
 .service-title {
     font-size: 20px;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 15px;
 }
 
@@ -559,7 +565,7 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
     color: var(--white);
     display: flex;
     align-items: center;
@@ -652,7 +658,7 @@ section {
 
 .comparison-icon.time {
     background-color: rgba(44, 85, 48, 0.2);
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .comparison-icon svg {
@@ -663,7 +669,7 @@ section {
 .comparison-title {
     font-size: 22px;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -697,7 +703,7 @@ section {
 }
 
 .value-proposition {
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 30px;
     border-radius: 12px;
@@ -809,13 +815,13 @@ section {
 .testimonial-author {
     font-size: 14px;
     font-weight: 600;
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .social-proof-stats {
     text-align: center;
     padding: 30px;
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
     color: var(--white);
     border-radius: 12px;
 }
@@ -862,7 +868,7 @@ section {
 .credentials-title {
     font-size: 20px;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 20px;
 }
 
@@ -896,7 +902,7 @@ section {
 .service-area-title {
     font-size: 20px;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -930,7 +936,7 @@ section {
 .service-note {
     font-size: 14px;
     font-weight: 600;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     text-align: center;
     margin: 0;
 }
@@ -964,7 +970,7 @@ section {
     text-align: left;
     font-size: 18px;
     font-weight: 600;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1073,7 +1079,7 @@ section {
 
 .urgency-benefit-title {
     font-size: 20px;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 15px;
     text-align: center;
 }
@@ -1149,7 +1155,7 @@ section {
 ======================================== */
 
 .site-footer {
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 60px 0 30px;
 }
@@ -1451,7 +1457,7 @@ a:focus, button:focus {
 .modal-close svg {
     width: 24px;
     height: 24px;
-    stroke: var(--primary-green);
+    stroke: var(--primary-blue);
     transition: stroke 0.3s ease;
 }
 
@@ -1473,7 +1479,7 @@ a:focus, button:focus {
 .modal-title {
     font-size: 36px;
     font-weight: 800;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 10px;
 }
 
@@ -1562,7 +1568,7 @@ a:focus, button:focus {
 .gallery-nav svg {
     width: 24px;
     height: 24px;
-    stroke: var(--primary-green);
+    stroke: var(--primary-blue);
     transition: stroke 0.3s ease;
 }
 
@@ -1592,7 +1598,7 @@ a:focus, button:focus {
 
 .detail-item p {
     font-size: 18px;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
 }
 
@@ -1674,4 +1680,181 @@ a:focus, button:focus {
 /* Prevent body scroll when modal is open */
 body.modal-open {
     overflow: hidden;
+}
+
+/* ========================================
+   CHRISTMAS SNOWFLAKES ANIMATION
+======================================== */
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: var(--snowflake-white);
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 0.8;
+    }
+    100% {
+        top: 110%;
+        opacity: 0.3;
+    }
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+    font-size: 1.5em;
+}
+
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+    font-size: 1em;
+}
+
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+    font-size: 1.3em;
+}
+
+.snowflake:nth-child(5) {
+    left: 50%;
+    animation-duration: 11s;
+    animation-delay: 3s;
+    font-size: 1.4em;
+}
+
+.snowflake:nth-child(6) {
+    left: 60%;
+    animation-duration: 13s;
+    animation-delay: 5s;
+    font-size: 1.1em;
+}
+
+.snowflake:nth-child(7) {
+    left: 70%;
+    animation-duration: 16s;
+    animation-delay: 2s;
+    font-size: 1.6em;
+}
+
+.snowflake:nth-child(8) {
+    left: 80%;
+    animation-duration: 9s;
+    animation-delay: 6s;
+    font-size: 0.9em;
+}
+
+.snowflake:nth-child(9) {
+    left: 90%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(10) {
+    left: 15%;
+    animation-duration: 14s;
+    animation-delay: 4s;
+    font-size: 1.3em;
+}
+
+.snowflake:nth-child(11) {
+    left: 25%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+    font-size: 1.1em;
+}
+
+.snowflake:nth-child(12) {
+    left: 35%;
+    animation-duration: 13s;
+    animation-delay: 3s;
+    font-size: 1.4em;
+}
+
+.snowflake:nth-child(13) {
+    left: 45%;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(14) {
+    left: 55%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+    font-size: 1.5em;
+}
+
+.snowflake:nth-child(15) {
+    left: 65%;
+    animation-duration: 12s;
+    animation-delay: 6s;
+    font-size: 1em;
+}
+
+.snowflake:nth-child(16) {
+    left: 75%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+    font-size: 1.3em;
+}
+
+.snowflake:nth-child(17) {
+    left: 85%;
+    animation-duration: 11s;
+    animation-delay: 4s;
+    font-size: 1.1em;
+}
+
+.snowflake:nth-child(18) {
+    left: 95%;
+    animation-duration: 13s;
+    animation-delay: 0s;
+    font-size: 1.4em;
+}
+
+.snowflake:nth-child(19) {
+    left: 5%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(20) {
+    left: 50%;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    font-size: 1.5em;
 }
