@@ -50,6 +50,28 @@ body {
     background: linear-gradient(180deg, var(--deep-frozen-blue) 0%, var(--primary-blue) 50%, var(--ice-blue) 100%);
     background-attachment: fixed;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Subtle snow texture overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 200px 200px, 300px 300px, 250px 250px, 350px 350px, 180px 180px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 150px 50px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -456,7 +478,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(220, 38, 38, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 90% 80%, rgba(220, 38, 38, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 25% 50%, rgba(255, 255, 255, 0.03) 2px, transparent 2px),
+        radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 100% 100%, 250px 250px, 300px 300px, 200px 200px;
+    background-position: 0 0, 0 0, 0 0, 50px 50px, 100px 25px;
     pointer-events: none;
 }
 
@@ -532,7 +559,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 30% 40%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 85% 25%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 55% 85%, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+    background-size: 100% 100%, 100% 100%, 220px 220px, 280px 280px, 240px 240px;
+    background-position: 0 0, 0 0, 0 0, 75px 100px, 50px 150px;
     pointer-events: none;
 }
 
@@ -666,7 +698,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(220, 38, 38, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 80% 70%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 35% 60%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.03) 2px, transparent 2px),
+        radial-gradient(circle at 45% 90%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 100% 100%, 260px 260px, 290px 290px, 230px 230px;
+    background-position: 0 0, 0 0, 0 0, 60px 80px, 120px 40px;
     pointer-events: none;
 }
 
@@ -794,7 +831,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 15% 25%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 85% 75%, rgba(220, 38, 38, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 85% 75%, rgba(220, 38, 38, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 45%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+    background-size: 100% 100%, 100% 100%, 270px 270px, 310px 310px, 245px 245px;
+    background-position: 0 0, 0 0, 0 0, 90px 45px, 30px 120px;
     pointer-events: none;
 }
 
@@ -919,7 +961,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 25% 35%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 75% 65%, rgba(220, 38, 38, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 75% 65%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 50% 55%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.03) 2px, transparent 2px),
+        radial-gradient(circle at 80% 75%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 100% 100%, 255px 255px, 295px 295px, 235px 235px;
+    background-position: 0 0, 0 0, 0 0, 110px 70px, 45px 135px;
     pointer-events: none;
 }
 
@@ -994,29 +1041,146 @@ section {
 }
 
 .service-area-map {
-    max-width: 200px;
-    margin: 0 auto 20px;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    background: rgba(10, 22, 40, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.15);
 }
 
-.service-area-list {
-    list-style: none;
+.counties-served {
+    margin: 30px 0;
+}
+
+.counties-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.counties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
     margin-bottom: 20px;
 }
 
-.service-area-list li {
-    font-size: 16px;
+.county-item {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
     color: var(--white);
-    margin-bottom: 8px;
-    padding-left: 20px;
+    font-size: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.county-item:hover {
+    background: rgba(255, 215, 0, 0.15);
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.county-item.primary {
+    background: rgba(255, 215, 0, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.6);
     position: relative;
 }
 
-.service-area-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--accent-gold);
+.county-badge {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
     font-weight: 700;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.cities-details {
+    background: rgba(10, 22, 40, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.cities-summary {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent-gold);
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.cities-summary::-webkit-details-marker {
+    display: none;
+}
+
+.cities-summary::after {
+    content: ' ▼';
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.cities-details[open] .cities-summary::after {
+    transform: rotate(180deg);
+}
+
+.cities-summary:hover {
+    color: var(--white);
+}
+
+.cities-by-county {
+    padding: 15px 10px 5px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.county-group {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.county-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.county-group h5 {
+    color: var(--accent-gold);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.county-group p {
+    color: var(--white);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .service-note {
@@ -1045,7 +1209,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(220, 38, 38, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 70% 60%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 45% 35%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 70%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+    background-size: 100% 100%, 100% 100%, 265px 265px, 285px 285px, 250px 250px;
+    background-position: 0 0, 0 0, 0 0, 70px 90px, 140px 30px;
     pointer-events: none;
 }
 
@@ -1130,7 +1299,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(220, 38, 38, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 80% 70%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 55% 40%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 35% 65%, rgba(255, 255, 255, 0.03) 2px, transparent 2px),
+        radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 100% 100%, 275px 275px, 305px 305px, 260px 260px;
+    background-position: 0 0, 0 0, 0 0, 85px 60px, 155px 110px;
     pointer-events: none;
 }
 
@@ -1240,7 +1414,12 @@ section {
     bottom: 0;
     background-image:
         radial-gradient(circle at 35% 45%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 65% 55%, rgba(220, 38, 38, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 65% 55%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.025) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 20% 60%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 85% 40%, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+    background-size: 100% 100%, 100% 100%, 280px 280px, 320px 320px, 270px 270px;
+    background-position: 0 0, 0 0, 0 0, 95px 75px, 50px 145px;
     pointer-events: none;
 }
 
@@ -1836,11 +2015,12 @@ body.modal-open {
     position: absolute;
     top: -10px;
     color: var(--snowflake-white);
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: Arial, sans-serif;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 16px rgba(135, 206, 235, 0.4);
     animation: fall linear infinite;
-    opacity: 0.8;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7));
 }
 
 @keyframes fall {

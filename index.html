@@ -523,41 +523,83 @@
                 </div>
 
                 <div class="service-area">
-                    <h3 class="service-area-title">Service Areas</h3>
+                    <h3 class="service-area-title">Service Area Map</h3>
                     <div class="service-area-map">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="80" fill="#2C5530" opacity="0.1"/>
-                            <circle cx="100" cy="100" r="60" fill="#2C5530" opacity="0.2"/>
-                            <circle cx="100" cy="100" r="40" fill="#2C5530" opacity="0.3"/>
-                            <circle cx="100" cy="100" r="8" fill="#D4AF37"/>
-                            <text x="100" y="105" text-anchor="middle" font-size="12" fill="#2C5530" font-weight="bold">Newberg</text>
+                        <!-- Simplified Oregon County Map -->
+                        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Oregon outline (simplified) -->
+                            <path d="M 50 50 L 350 50 L 350 450 L 50 450 Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+                            <!-- Multnomah County (Portland area) -->
+                            <path d="M 180 120 L 240 120 L 240 160 L 180 160 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
+
+                            <!-- Washington County (west of Portland) -->
+                            <path d="M 120 120 L 180 120 L 180 180 L 120 180 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
+
+                            <!-- Clackamas County (south of Portland) -->
+                            <path d="M 180 160 L 260 160 L 260 240 L 180 240 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
+
+                            <!-- Yamhill County (PRIMARY - highlighted more) -->
+                            <path d="M 100 180 L 180 180 L 180 260 L 100 260 Z" fill="rgba(255, 215, 0, 0.5)" stroke="rgba(255, 215, 0, 0.7)" stroke-width="3"/>
+
+                            <!-- Marion County (south, includes Salem) -->
+                            <path d="M 140 260 L 220 260 L 220 340 L 140 340 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
+
+                            <!-- Legend -->
+                            <g transform="translate(20, 380)">
+                                <rect x="0" y="0" width="25" height="25" fill="rgba(255, 215, 0, 0.5)" stroke="rgba(255, 215, 0, 0.7)" stroke-width="2"/>
+                                <text x="35" y="18" font-size="14" fill="#FFFFFF" font-weight="bold">Primary Service Area</text>
+
+                                <rect x="0" y="35" width="25" height="25" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
+                                <text x="35" y="53" font-size="14" fill="#FFFFFF">Extended Service Area</text>
+                            </g>
+
+                            <!-- Star marker for Newberg -->
+                            <circle cx="140" cy="220" r="6" fill="#DC2626"/>
+                            <text x="155" y="225" font-size="14" fill="#FFFFFF" font-weight="bold">Newberg</text>
                         </svg>
                     </div>
-                    <ul class="service-area-list">
-                        <li><strong>Newberg</strong> (primary service area)</li>
-                        <li>Dundee</li>
-                        <li>McMinnville</li>
-                        <li>Sherwood</li>
-                        <li>Wilsonville</li>
-                        <li>Tigard</li>
-                        <li>Tualatin</li>
-                        <li>Lake Oswego</li>
-                        <li>West Linn</li>
-                        <li>Oregon City</li>
-                        <li>Portland</li>
-                        <li>Beaverton</li>
-                        <li>Hillsboro</li>
-                        <li>Forest Grove</li>
-                        <li>Cornelius</li>
-                        <li>Dayton</li>
-                        <li>Lafayette</li>
-                        <li>Carlton</li>
-                        <li>Amity</li>
-                        <li>Yamhill</li>
-                        <li>Woodburn</li>
-                        <li>Canby</li>
-                        <li>Salem</li>
-                    </ul>
+
+                    <div class="counties-served">
+                        <h4 class="counties-title">Counties We Serve:</h4>
+                        <div class="counties-grid">
+                            <div class="county-item primary">
+                                <strong>Yamhill County</strong>
+                                <span class="county-badge">Primary</span>
+                            </div>
+                            <div class="county-item">Washington County</div>
+                            <div class="county-item">Clackamas County</div>
+                            <div class="county-item">Multnomah County</div>
+                            <div class="county-item">Marion County</div>
+                        </div>
+                    </div>
+
+                    <details class="cities-details">
+                        <summary class="cities-summary">View All Cities We Serve</summary>
+                        <div class="cities-by-county">
+                            <div class="county-group">
+                                <h5>Yamhill County</h5>
+                                <p>Newberg, Dundee, McMinnville, Dayton, Lafayette, Carlton, Amity, Yamhill</p>
+                            </div>
+                            <div class="county-group">
+                                <h5>Washington County</h5>
+                                <p>Sherwood, Wilsonville, Tigard, Tualatin, Beaverton, Hillsboro, Forest Grove, Cornelius</p>
+                            </div>
+                            <div class="county-group">
+                                <h5>Clackamas County</h5>
+                                <p>Lake Oswego, West Linn, Oregon City, Canby</p>
+                            </div>
+                            <div class="county-group">
+                                <h5>Multnomah County</h5>
+                                <p>Portland</p>
+                            </div>
+                            <div class="county-group">
+                                <h5>Marion County</h5>
+                                <p>Woodburn, Salem</p>
+                            </div>
+                        </div>
+                    </details>
+
                     <p class="service-note"><strong>Most installations completed within 72 hours of booking</strong></p>
                 </div>
             </div>
