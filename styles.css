@@ -417,8 +417,17 @@ button {
 .lead-magnet-icon {
     width: 24px;
     height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
     color: var(--accent-gold);
     flex-shrink: 0;
+}
+
+.lead-magnet-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 .lead-magnet-text {
@@ -465,6 +474,7 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
     z-index: 2;
     background: rgba(10, 22, 40, 0.85);
     backdrop-filter: blur(10px);
@@ -476,24 +486,31 @@ button {
     margin: 0 auto;
     padding: 16px 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .trust-item {
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
     color: rgba(255, 255, 255, 0.85);
     font-size: 13px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .trust-item svg {
     width: 16px;
     height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
     color: var(--accent-gold);
     flex-shrink: 0;
 }
@@ -502,10 +519,12 @@ button {
     width: 1px;
     height: 16px;
     background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
 }
 
 .trust-rating {
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
     align-items: center;
     gap: 6px;
 }
@@ -520,7 +539,7 @@ button {
 @media (max-width: 767px) {
     .hero {
         min-height: auto;
-        padding: 100px 16px 80px;
+        padding: 100px 16px 20px;
     }
 
     .hero-eyebrow {
@@ -573,6 +592,7 @@ button {
     }
 
     .trust-strip-inner {
+        flex-wrap: wrap;
         gap: 12px 20px;
         padding: 14px 16px;
     }
@@ -592,7 +612,8 @@ button {
     }
 
     .trust-strip-inner {
-        justify-content: space-around;
+        justify-content: center;
+        gap: 16px;
     }
 
     .trust-item span {
@@ -602,6 +623,10 @@ button {
     .trust-item svg {
         width: 20px;
         height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 20px;
+        max-height: 20px;
     }
 
     .trust-rating span:last-child {
