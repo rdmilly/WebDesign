@@ -193,64 +193,205 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Whimsical Christmas Village Style -->
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-eyebrow">Professional Christmas Light Installation</p>
-            <h1 class="hero-headline">Make Your Home the<br><span class="headline-accent">Star of the Neighborhood</span></h1>
-            <p class="hero-supporting">Full-service holiday lighting. We design, install, maintain & store. You simply enjoy.</p>
-
-            <div class="hero-cta-group">
-                <button class="cta-button cta-primary" onclick="scrollToForm()">
-                    <span>Get Your Free Estimate</span>
-                    <svg class="cta-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </button>
-                <button class="cta-button cta-secondary" onclick="scrollToGallery()">See Our Work</button>
-            </div>
-
-            <!-- Lead Magnet -->
-            <div class="lead-magnet">
-                <div class="lead-magnet-content">
-                    <svg class="lead-magnet-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                    <div class="lead-magnet-text">
-                        <span class="lead-magnet-label">Free Guide</span>
-                        <span class="lead-magnet-title">Holiday Lighting Ideas for Your Home</span>
-                    </div>
-                    <button class="lead-magnet-btn" onclick="scrollToForm()">Download</button>
-                </div>
+        <div class="hero-background">
+            <!-- Starry sky -->
+            <div class="stars"></div>
+            <!-- Glowing moon -->
+            <div class="moon"></div>
+            <!-- Floating particles -->
+            <div class="magic-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
             </div>
         </div>
 
-        <!-- Minimal Trust Strip -->
-        <div class="trust-strip">
-            <div class="trust-strip-inner">
-                <div class="trust-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    <span>Licensed & Insured</span>
+        <!-- Village Silhouette -->
+        <div class="village-scene">
+            <svg class="village-svg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice">
+                <!-- Snow ground -->
+                <ellipse cx="720" cy="420" rx="900" ry="100" fill="url(#snowGround)"/>
+
+                <!-- House 1 - Small cottage left -->
+                <g class="house house-1" transform="translate(80, 180)">
+                    <rect x="0" y="40" width="80" height="70" fill="#2a1810"/>
+                    <polygon points="0,40 40,-10 80,40" fill="#4a2820"/>
+                    <rect class="window glow-window" x="15" y="55" width="20" height="25" fill="#ff9940" rx="2"/>
+                    <rect class="window glow-window" x="45" y="55" width="20" height="25" fill="#ffb060" rx="2"/>
+                    <rect x="30" y="80" width="20" height="30" fill="#1a0f0a"/>
+                    <rect x="50" y="10" width="8" height="20" fill="#3a2015"/>
+                </g>
+
+                <!-- House 2 - Tall house -->
+                <g class="house house-2" transform="translate(200, 140)">
+                    <rect x="0" y="50" width="70" height="100" fill="#2d1f18"/>
+                    <polygon points="-5,50 35,-20 75,50" fill="#4d3028"/>
+                    <rect class="window glow-window" x="10" y="65" width="18" height="22" fill="#ffa550" rx="2"/>
+                    <rect class="window glow-window" x="42" y="65" width="18" height="22" fill="#ff9030" rx="2"/>
+                    <rect class="window glow-window" x="10" y="100" width="18" height="22" fill="#ffb870" rx="2"/>
+                    <rect class="window glow-window" x="42" y="100" width="18" height="22" fill="#ffa040" rx="2"/>
+                    <rect x="25" y="125" width="20" height="25" fill="#1a0f0a"/>
+                </g>
+
+                <!-- Church/Main building center -->
+                <g class="house house-3" transform="translate(380, 100)">
+                    <rect x="20" y="80" width="100" height="120" fill="#352218"/>
+                    <polygon points="20,80 70,-30 120,80" fill="#4d3028"/>
+                    <polygon points="60,-30 70,-70 80,-30" fill="#5d4038"/>
+                    <circle class="star-top" cx="70" cy="-75" r="8" fill="#ffd700"/>
+                    <rect class="window glow-window church-window" x="50" y="95" width="40" height="60" fill="#ff8c30" rx="4"/>
+                    <rect class="window glow-window" x="30" y="160" width="25" height="30" fill="#ffaa50" rx="2"/>
+                    <rect class="window glow-window" x="85" y="160" width="25" height="30" fill="#ff9940" rx="2"/>
+                </g>
+
+                <!-- House 4 - Cozy house right of center -->
+                <g class="house house-4" transform="translate(550, 160)">
+                    <rect x="0" y="40" width="90" height="80" fill="#2a1a12"/>
+                    <polygon points="-5,40 45,-25 95,40" fill="#4a3020"/>
+                    <rect class="window glow-window" x="12" y="55" width="22" height="28" fill="#ffb060" rx="2"/>
+                    <rect class="window glow-window" x="56" y="55" width="22" height="28" fill="#ff9940" rx="2"/>
+                    <rect x="35" y="90" width="22" height="30" fill="#1a0f0a"/>
+                    <ellipse cx="80" cy="30" rx="25" ry="20" fill="#2d4a2d"/>
+                </g>
+
+                <!-- House 5 - Small shop -->
+                <g class="house house-5" transform="translate(700, 175)">
+                    <rect x="0" y="35" width="70" height="65" fill="#2d1818"/>
+                    <polygon points="0,35 35,-5 70,35" fill="#4d2828"/>
+                    <rect class="window glow-window" x="8" y="45" width="24" height="20" fill="#ffa550" rx="2"/>
+                    <rect class="window glow-window" x="38" y="45" width="24" height="20" fill="#ffb870" rx="2"/>
+                    <rect x="22" y="72" width="26" height="28" fill="#1a0f0a"/>
+                    <rect class="window glow-window" x="24" y="74" width="22" height="16" fill="#ff9030" rx="1"/>
+                </g>
+
+                <!-- House 6 - Tall narrow house -->
+                <g class="house house-6" transform="translate(820, 130)">
+                    <rect x="0" y="60" width="55" height="110" fill="#251812"/>
+                    <polygon points="-3,60 27.5,-10 58,60" fill="#453025"/>
+                    <rect class="window glow-window" x="8" y="75" width="16" height="20" fill="#ff9940" rx="2"/>
+                    <rect class="window glow-window" x="31" y="75" width="16" height="20" fill="#ffaa50" rx="2"/>
+                    <rect class="window glow-window" x="8" y="110" width="16" height="20" fill="#ffb060" rx="2"/>
+                    <rect class="window glow-window" x="31" y="110" width="16" height="20" fill="#ff9030" rx="2"/>
+                    <rect x="18" y="150" width="18" height="20" fill="#1a0f0a"/>
+                </g>
+
+                <!-- House 7 - Wide manor right -->
+                <g class="house house-7" transform="translate(950, 150)">
+                    <rect x="0" y="50" width="120" height="90" fill="#2d1f15"/>
+                    <polygon points="0,50 60,-20 120,50" fill="#4d3525"/>
+                    <rect class="window glow-window" x="15" y="65" width="25" height="30" fill="#ffa550" rx="2"/>
+                    <rect class="window glow-window" x="48" y="65" width="25" height="30" fill="#ffb870" rx="2"/>
+                    <rect class="window glow-window" x="80" y="65" width="25" height="30" fill="#ff9940" rx="2"/>
+                    <rect x="48" y="110" width="25" height="30" fill="#1a0f0a"/>
+                    <circle class="wreath" cx="60" cy="120" r="8" fill="none" stroke="#2d5a2d" stroke-width="4"/>
+                </g>
+
+                <!-- Pine trees scattered -->
+                <g class="tree" transform="translate(30, 220)">
+                    <polygon points="25,0 0,80 50,80" fill="#1a3a1a"/>
+                    <polygon points="25,20 5,70 45,70" fill="#2d4a2d"/>
+                </g>
+                <g class="tree" transform="translate(170, 250)">
+                    <polygon points="20,0 0,60 40,60" fill="#1a3a1a"/>
+                    <polygon points="20,15 5,50 35,50" fill="#2d4a2d"/>
+                </g>
+                <g class="tree" transform="translate(650, 250)">
+                    <polygon points="18,0 0,55 36,55" fill="#1a3a1a"/>
+                    <polygon points="18,12 5,45 31,45" fill="#2d4a2d"/>
+                </g>
+                <g class="tree" transform="translate(1100, 230)">
+                    <polygon points="22,0 0,70 44,70" fill="#1a3a1a"/>
+                    <polygon points="22,18 6,58 38,58" fill="#2d4a2d"/>
+                </g>
+                <g class="tree" transform="translate(1200, 250)">
+                    <polygon points="15,0 0,50 30,50" fill="#1a3a1a"/>
+                </g>
+
+                <!-- Lamp posts with glow -->
+                <g class="lamp-post" transform="translate(320, 200)">
+                    <rect x="3" y="20" width="4" height="60" fill="#1a1a1a"/>
+                    <circle class="lamp-glow" cx="5" cy="15" r="12" fill="url(#lampGlow)"/>
+                    <rect x="0" y="10" width="10" height="12" fill="#2a2a2a" rx="2"/>
+                </g>
+                <g class="lamp-post" transform="translate(580, 210)">
+                    <rect x="3" y="20" width="4" height="50" fill="#1a1a1a"/>
+                    <circle class="lamp-glow" cx="5" cy="15" r="12" fill="url(#lampGlow)"/>
+                    <rect x="0" y="10" width="10" height="12" fill="#2a2a2a" rx="2"/>
+                </g>
+                <g class="lamp-post" transform="translate(900, 205)">
+                    <rect x="3" y="20" width="4" height="55" fill="#1a1a1a"/>
+                    <circle class="lamp-glow" cx="5" cy="15" r="12" fill="url(#lampGlow)"/>
+                    <rect x="0" y="10" width="10" height="12" fill="#2a2a2a" rx="2"/>
+                </g>
+
+                <!-- Gradients -->
+                <defs>
+                    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ffdd88" stop-opacity="0.9"/>
+                        <stop offset="50%" stop-color="#ffaa44" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="snowGround" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#e8f0f8"/>
+                        <stop offset="100%" stop-color="#c0d8e8"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Content overlay -->
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-star">&#9733;</span>
+                <span>Trusted by 500+ Families in Yamhill County</span>
+            </div>
+
+            <h1 class="hero-headline">
+                Bring the Magic of the<br>
+                <span class="headline-accent">Holidays Home</span>
+            </h1>
+
+            <p class="hero-supporting">
+                Professional Christmas light installation that transforms your home
+                into a winter wonderland. We handle everything — you simply enjoy the magic.
+            </p>
+
+            <div class="hero-cta-group">
+                <button class="cta-button cta-primary cta-glow" onclick="scrollToForm()">
+                    <span>Get Your Free Design</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+                <button class="cta-button cta-secondary" onclick="scrollToGallery()">
+                    <svg class="cta-icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <span>View Our Work</span>
+                </button>
+            </div>
+
+            <!-- Trust indicators -->
+            <div class="hero-trust">
+                <div class="trust-item-hero">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Fully Insured</span>
                 </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <div class="trust-item-hero">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
                     <span>10+ Years</span>
                 </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>100% Satisfaction</span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item trust-rating">
-                    <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    <span>4.9 on Google</span>
+                <div class="trust-item-hero">
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span>4.9 Rating</span>
                 </div>
             </div>
         </div>
