@@ -415,6 +415,57 @@ button {
     50% { opacity: 1; transform: scale(1.1); }
 }
 
+/* Christmas Lights Animation */
+.christmas-lights circle {
+    filter: drop-shadow(0 0 4px currentColor);
+}
+
+.light-red {
+    fill: #ff3333;
+    filter: drop-shadow(0 0 6px #ff3333) drop-shadow(0 0 10px #ff0000);
+    animation: light-twinkle-red 1.5s infinite ease-in-out;
+}
+
+.light-green {
+    fill: #33ff33;
+    filter: drop-shadow(0 0 6px #33ff33) drop-shadow(0 0 10px #00ff00);
+    animation: light-twinkle-green 1.8s infinite ease-in-out;
+}
+
+.light-yellow {
+    fill: #ffff33;
+    filter: drop-shadow(0 0 6px #ffff33) drop-shadow(0 0 10px #ffff00);
+    animation: light-twinkle-yellow 2s infinite ease-in-out;
+}
+
+@keyframes light-twinkle-red {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #ff3333) drop-shadow(0 0 10px #ff0000); }
+    50% { opacity: 0.7; filter: drop-shadow(0 0 3px #ff3333) drop-shadow(0 0 5px #ff0000); }
+}
+
+@keyframes light-twinkle-green {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #33ff33) drop-shadow(0 0 10px #00ff00); }
+    50% { opacity: 0.6; filter: drop-shadow(0 0 3px #33ff33) drop-shadow(0 0 5px #00ff00); }
+}
+
+@keyframes light-twinkle-yellow {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #ffff33) drop-shadow(0 0 10px #ffff00); }
+    50% { opacity: 0.65; filter: drop-shadow(0 0 3px #ffff33) drop-shadow(0 0 5px #ffff00); }
+}
+
+/* Stagger the light animations */
+.christmas-lights circle:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+.christmas-lights circle:nth-child(3n) {
+    animation-delay: 0.6s;
+}
+
+.christmas-lights circle:nth-child(5n) {
+    animation-delay: 0.9s;
+}
+
 /* Hero Content */
 .hero-content {
     position: relative;
