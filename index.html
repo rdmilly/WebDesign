@@ -209,274 +209,278 @@
 
         <!-- Village Silhouette -->
         <div class="village-scene">
-            <svg class="village-svg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice">
+            <svg class="village-svg" viewBox="0 0 1400 400" preserveAspectRatio="xMidYMax slice">
                 <!-- Snow ground -->
-                <ellipse cx="720" cy="420" rx="900" ry="100" fill="url(#snowGround)"/>
+                <ellipse cx="700" cy="420" rx="850" ry="100" fill="url(#snowGround)"/>
 
-                <!-- House 1 - Small cottage left -->
-                <g class="house house-1" transform="translate(50, 200)">
-                    <!-- House body -->
-                    <rect x="0" y="50" width="100" height="80" fill="#2a1810"/>
-                    <!-- Roof -->
-                    <polygon points="-5,50 50,-15 105,50" fill="#4a2820"/>
-                    <!-- Chimney -->
-                    <rect x="70" y="0" width="15" height="35" fill="#3a2015"/>
-                    <!-- Windows - symmetrical -->
-                    <rect class="window glow-window" x="15" y="70" width="28" height="35" fill="#ff9940" rx="2"/>
-                    <rect class="window glow-window" x="57" y="70" width="28" height="35" fill="#ffb060" rx="2"/>
-                    <!-- Door -->
-                    <rect x="38" y="95" width="24" height="35" fill="#1a0f0a" rx="2"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="5" cy="50" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="20" cy="38" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="35" cy="28" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="50" cy="22" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="65" cy="28" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="80" cy="38" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="95" cy="50" r="3" fill="#00ff00" class="light-green"/>
-                    </g>
+                <!-- House 1 - Plain dark cottage (jealous) -->
+                <g class="house house-plain" transform="translate(80, 210)">
+                    <rect x="0" y="50" width="90" height="75" fill="#1a1008"/>
+                    <polygon points="-5,50 45,-12 95,50" fill="#2a1510"/>
+                    <rect x="65" y="5" width="12" height="30" fill="#201008"/>
+                    <rect class="window dim-window" x="12" y="68" width="25" height="32" fill="#3a2810" rx="2"/>
+                    <rect class="window dim-window" x="53" y="68" width="25" height="32" fill="#3a2810" rx="2"/>
+                    <rect x="33" y="95" width="24" height="30" fill="#0a0505" rx="2"/>
                 </g>
 
-                <!-- House 2 - Tall house -->
-                <g class="house house-2" transform="translate(180, 150)">
-                    <!-- House body -->
-                    <rect x="0" y="60" width="90" height="120" fill="#2d1f18"/>
-                    <!-- Roof -->
-                    <polygon points="-5,60 45,-20 95,60" fill="#4d3028"/>
-                    <!-- Chimney -->
-                    <rect x="60" y="5" width="14" height="40" fill="#3a2518"/>
-                    <!-- Windows - symmetrical, 2 rows -->
-                    <rect class="window glow-window" x="12" y="80" width="26" height="32" fill="#ffa550" rx="2"/>
-                    <rect class="window glow-window" x="52" y="80" width="26" height="32" fill="#ff9030" rx="2"/>
-                    <rect class="window glow-window" x="12" y="125" width="26" height="32" fill="#ffb870" rx="2"/>
-                    <rect class="window glow-window" x="52" y="125" width="26" height="32" fill="#ffa040" rx="2"/>
-                    <!-- Door -->
-                    <rect x="32" y="145" width="26" height="35" fill="#1a0f0a" rx="2"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="5" cy="60" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="18" cy="45" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="31" cy="32" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="45" cy="25" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="59" cy="32" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="72" cy="45" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="85" cy="60" r="3" fill="#00ff00" class="light-green"/>
-                    </g>
+                <!-- House 2 - Plain tall house (jealous) -->
+                <g class="house house-plain" transform="translate(200, 165)">
+                    <rect x="0" y="55" width="85" height="105" fill="#1d1210"/>
+                    <polygon points="-5,55 42,-15 90,55" fill="#2d1815"/>
+                    <rect x="58" y="5" width="12" height="35" fill="#1a0d08"/>
+                    <rect class="window dim-window" x="12" y="75" width="24" height="30" fill="#3a2810" rx="2"/>
+                    <rect class="window dim-window" x="49" y="75" width="24" height="30" fill="#3a2810" rx="2"/>
+                    <rect x="30" y="130" width="25" height="30" fill="#0a0505" rx="2"/>
                 </g>
 
-                <!-- House 3 - Church/Main building center -->
-                <g class="house house-3" transform="translate(350, 120)">
-                    <!-- Main building -->
-                    <rect x="15" y="80" width="120" height="130" fill="#352218"/>
-                    <!-- Main roof -->
-                    <polygon points="10,80 75,-25 140,80" fill="#4d3028"/>
-                    <!-- Steeple -->
-                    <polygon points="65,-25 75,-70 85,-25" fill="#5d4038"/>
-                    <!-- Star on top -->
-                    <circle class="star-top" cx="75" cy="-75" r="8" fill="#ffd700"/>
-                    <!-- Large center window (church style) -->
-                    <rect class="window glow-window church-window" x="50" y="100" width="50" height="70" fill="#ff8c30" rx="4"/>
-                    <!-- Side windows - symmetrical -->
-                    <rect class="window glow-window" x="25" y="165" width="30" height="35" fill="#ffaa50" rx="2"/>
-                    <rect class="window glow-window" x="95" y="165" width="30" height="35" fill="#ff9940" rx="2"/>
-                    <!-- Door -->
-                    <rect x="58" y="175" width="34" height="35" fill="#1a0f0a" rx="3"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="15" cy="80" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="30" cy="62" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="45" cy="45" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="60" cy="30" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="75" cy="25" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="90" cy="30" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="105" cy="45" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="120" cy="62" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="135" cy="80" r="3" fill="#ffff00" class="light-yellow"/>
-                    </g>
+                <!-- House 3 - Plain church-style (jealous) -->
+                <g class="house house-plain" transform="translate(320, 140)">
+                    <rect x="10" y="70" width="100" height="110" fill="#1f1510"/>
+                    <polygon points="5,70 60,-20 115,70" fill="#2f1a15"/>
+                    <polygon points="50,-20 60,-55 70,-20" fill="#3a2520"/>
+                    <rect class="window dim-window" x="25" y="90" width="28" height="40" fill="#3a2810" rx="2"/>
+                    <rect class="window dim-window" x="67" y="90" width="28" height="40" fill="#3a2810" rx="2"/>
+                    <rect x="43" y="150" width="34" height="30" fill="#0a0505" rx="3"/>
                 </g>
 
-                <!-- House 4 - Cozy house right of center -->
-                <g class="house house-4" transform="translate(520, 175)">
-                    <!-- House body -->
-                    <rect x="0" y="50" width="110" height="95" fill="#2a1a12"/>
+                <!-- House 4 - THE SPECTACULAR HOUSE WITH ALL THE LIGHTS -->
+                <g class="house house-featured" transform="translate(480, 160)">
+                    <!-- House body with slight glow -->
+                    <rect x="0" y="55" width="130" height="110" fill="#3d2818"/>
                     <!-- Roof -->
-                    <polygon points="-5,50 55,-20 115,50" fill="#4a3020"/>
+                    <polygon points="-8,55 65,-30 138,55" fill="#5d3828"/>
                     <!-- Chimney -->
-                    <rect x="80" y="5" width="14" height="35" fill="#3a2518"/>
-                    <!-- Windows - symmetrical -->
-                    <rect class="window glow-window" x="15" y="70" width="30" height="38" fill="#ffb060" rx="2"/>
-                    <rect class="window glow-window" x="65" y="70" width="30" height="38" fill="#ff9940" rx="2"/>
+                    <rect x="95" y="0" width="16" height="40" fill="#4a2818"/>
+                    <!-- Smoke from chimney -->
+                    <g class="chimney-smoke">
+                        <circle cx="103" cy="-10" r="4" fill="rgba(200,200,200,0.3)"/>
+                        <circle cx="106" cy="-20" r="5" fill="rgba(200,200,200,0.2)"/>
+                        <circle cx="100" cy="-32" r="6" fill="rgba(200,200,200,0.1)"/>
+                    </g>
+                    <!-- Windows - bright and warm (only 2) -->
+                    <rect class="window bright-window" x="18" y="80" width="38" height="45" fill="#ffcc44" rx="3"/>
+                    <rect class="window bright-window" x="74" y="80" width="38" height="45" fill="#ffdd66" rx="3"/>
+                    <!-- Window frames -->
+                    <line x1="37" y1="80" x2="37" y2="125" stroke="#4a2818" stroke-width="2"/>
+                    <line x1="18" y1="102" x2="56" y2="102" stroke="#4a2818" stroke-width="2"/>
+                    <line x1="93" y1="80" x2="93" y2="125" stroke="#4a2818" stroke-width="2"/>
+                    <line x1="74" y1="102" x2="112" y2="102" stroke="#4a2818" stroke-width="2"/>
                     <!-- Door -->
-                    <rect x="42" y="110" width="26" height="35" fill="#1a0f0a" rx="2"/>
+                    <rect x="50" y="130" width="30" height="35" fill="#2a1508" rx="3"/>
                     <!-- Wreath on door -->
-                    <circle cx="55" cy="120" r="7" fill="none" stroke="#2d5a2d" stroke-width="3"/>
-                    <circle cx="55" cy="115" r="2" fill="#ff0000"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="3" cy="50" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="18" cy="35" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="35" cy="22" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="55" cy="15" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="75" cy="22" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="92" cy="35" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="107" cy="50" r="3" fill="#ff0000" class="light-red"/>
+                    <circle cx="65" cy="142" r="9" fill="none" stroke="#2d6a2d" stroke-width="4"/>
+                    <circle cx="65" cy="135" r="3" fill="#ff2222"/>
+
+                    <!-- === SPECTACULAR CHRISTMAS LIGHTS === -->
+
+                    <!-- Roof peak lights - left slope -->
+                    <g class="christmas-lights roof-lights">
+                        <circle cx="0" cy="55" r="4" class="light-red"/>
+                        <circle cx="12" cy="44" r="4" class="light-green"/>
+                        <circle cx="24" cy="33" r="4" class="light-yellow"/>
+                        <circle cx="36" cy="22" r="4" class="light-red"/>
+                        <circle cx="48" cy="11" r="4" class="light-green"/>
+                        <circle cx="60" cy="2" r="4" class="light-yellow"/>
+                        <circle cx="65" cy="-2" r="5" class="light-star"/>
+                    </g>
+                    <!-- Roof peak lights - right slope -->
+                    <g class="christmas-lights roof-lights">
+                        <circle cx="70" cy="2" r="4" class="light-yellow"/>
+                        <circle cx="82" cy="11" r="4" class="light-green"/>
+                        <circle cx="94" cy="22" r="4" class="light-red"/>
+                        <circle cx="106" cy="33" r="4" class="light-yellow"/>
+                        <circle cx="118" cy="44" r="4" class="light-green"/>
+                        <circle cx="130" cy="55" r="4" class="light-red"/>
+                    </g>
+
+                    <!-- Roofline bottom edge lights -->
+                    <g class="christmas-lights eave-lights">
+                        <circle cx="-5" cy="55" r="3" class="light-blue"/>
+                        <circle cx="8" cy="55" r="3" class="light-red"/>
+                        <circle cx="21" cy="55" r="3" class="light-green"/>
+                        <circle cx="34" cy="55" r="3" class="light-yellow"/>
+                        <circle cx="47" cy="55" r="3" class="light-blue"/>
+                        <circle cx="60" cy="55" r="3" class="light-red"/>
+                        <circle cx="73" cy="55" r="3" class="light-green"/>
+                        <circle cx="86" cy="55" r="3" class="light-yellow"/>
+                        <circle cx="99" cy="55" r="3" class="light-blue"/>
+                        <circle cx="112" cy="55" r="3" class="light-red"/>
+                        <circle cx="125" cy="55" r="3" class="light-green"/>
+                        <circle cx="135" cy="55" r="3" class="light-yellow"/>
+                    </g>
+
+                    <!-- Window frame lights -->
+                    <g class="christmas-lights window-lights">
+                        <!-- Left window frame -->
+                        <circle cx="15" cy="77" r="2.5" class="light-red"/>
+                        <circle cx="15" cy="90" r="2.5" class="light-green"/>
+                        <circle cx="15" cy="103" r="2.5" class="light-red"/>
+                        <circle cx="15" cy="116" r="2.5" class="light-green"/>
+                        <circle cx="27" cy="128" r="2.5" class="light-yellow"/>
+                        <circle cx="42" cy="128" r="2.5" class="light-red"/>
+                        <circle cx="59" cy="116" r="2.5" class="light-green"/>
+                        <circle cx="59" cy="103" r="2.5" class="light-yellow"/>
+                        <circle cx="59" cy="90" r="2.5" class="light-red"/>
+                        <circle cx="59" cy="77" r="2.5" class="light-green"/>
+                        <!-- Right window frame -->
+                        <circle cx="71" cy="77" r="2.5" class="light-yellow"/>
+                        <circle cx="71" cy="90" r="2.5" class="light-red"/>
+                        <circle cx="71" cy="103" r="2.5" class="light-green"/>
+                        <circle cx="71" cy="116" r="2.5" class="light-yellow"/>
+                        <circle cx="83" cy="128" r="2.5" class="light-red"/>
+                        <circle cx="98" cy="128" r="2.5" class="light-green"/>
+                        <circle cx="115" cy="116" r="2.5" class="light-yellow"/>
+                        <circle cx="115" cy="103" r="2.5" class="light-red"/>
+                        <circle cx="115" cy="90" r="2.5" class="light-green"/>
+                        <circle cx="115" cy="77" r="2.5" class="light-yellow"/>
+                    </g>
+
+                    <!-- Door frame lights -->
+                    <g class="christmas-lights door-lights">
+                        <circle cx="47" cy="128" r="2.5" class="light-red"/>
+                        <circle cx="47" cy="140" r="2.5" class="light-green"/>
+                        <circle cx="47" cy="152" r="2.5" class="light-red"/>
+                        <circle cx="47" cy="164" r="2.5" class="light-green"/>
+                        <circle cx="83" cy="128" r="2.5" class="light-green"/>
+                        <circle cx="83" cy="140" r="2.5" class="light-red"/>
+                        <circle cx="83" cy="152" r="2.5" class="light-green"/>
+                        <circle cx="83" cy="164" r="2.5" class="light-red"/>
                     </g>
                 </g>
 
-                <!-- House 5 - Small shop -->
-                <g class="house house-5" transform="translate(680, 195)">
-                    <!-- House body -->
-                    <rect x="0" y="45" width="95" height="80" fill="#2d1818"/>
-                    <!-- Roof -->
-                    <polygon points="-5,45 47.5,-10 100,45" fill="#4d2828"/>
-                    <!-- Chimney -->
-                    <rect x="65" y="0" width="12" height="30" fill="#3a2020"/>
-                    <!-- Windows - symmetrical -->
-                    <rect class="window glow-window" x="12" y="60" width="28" height="35" fill="#ffa550" rx="2"/>
-                    <rect class="window glow-window" x="55" y="60" width="28" height="35" fill="#ffb870" rx="2"/>
-                    <!-- Door -->
-                    <rect x="35" y="95" width="25" height="30" fill="#1a0f0a" rx="2"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="3" cy="45" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="18" cy="32" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="33" cy="20" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="48" cy="15" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="63" cy="20" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="78" cy="32" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="93" cy="45" r="3" fill="#00ff00" class="light-green"/>
-                    </g>
+                <!-- Yard lights for featured house - ground outline -->
+                <g class="christmas-lights yard-lights" transform="translate(480, 160)">
+                    <!-- Front yard path lights -->
+                    <circle cx="-25" cy="175" r="3.5" class="light-red"/>
+                    <circle cx="-10" cy="180" r="3.5" class="light-green"/>
+                    <circle cx="8" cy="183" r="3.5" class="light-yellow"/>
+                    <circle cx="28" cy="185" r="3.5" class="light-blue"/>
+                    <circle cx="48" cy="186" r="3.5" class="light-red"/>
+                    <circle cx="68" cy="186" r="3.5" class="light-green"/>
+                    <circle cx="88" cy="185" r="3.5" class="light-yellow"/>
+                    <circle cx="108" cy="183" r="3.5" class="light-blue"/>
+                    <circle cx="128" cy="180" r="3.5" class="light-red"/>
+                    <circle cx="145" cy="175" r="3.5" class="light-green"/>
+                    <circle cx="160" cy="170" r="3.5" class="light-yellow"/>
                 </g>
 
-                <!-- House 6 - Tall narrow house -->
-                <g class="house house-6" transform="translate(820, 150)">
-                    <!-- House body -->
-                    <rect x="0" y="60" width="80" height="120" fill="#251812"/>
-                    <!-- Roof -->
-                    <polygon points="-5,60 40,-15 85,60" fill="#453025"/>
-                    <!-- Chimney -->
-                    <rect x="55" y="10" width="12" height="35" fill="#352015"/>
-                    <!-- Windows - symmetrical, 2 rows -->
-                    <rect class="window glow-window" x="10" y="80" width="24" height="30" fill="#ff9940" rx="2"/>
-                    <rect class="window glow-window" x="46" y="80" width="24" height="30" fill="#ffaa50" rx="2"/>
-                    <rect class="window glow-window" x="10" y="125" width="24" height="30" fill="#ffb060" rx="2"/>
-                    <rect class="window glow-window" x="46" y="125" width="24" height="30" fill="#ff9030" rx="2"/>
-                    <!-- Door -->
-                    <rect x="27" y="160" width="26" height="30" fill="#1a0f0a" rx="2"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="3" cy="60" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="15" cy="45" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="28" cy="32" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="40" cy="28" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="52" cy="32" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="65" cy="45" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="77" cy="60" r="3" fill="#ff0000" class="light-red"/>
-                    </g>
+                <!-- House 5 - Plain cottage (jealous) -->
+                <g class="house house-plain" transform="translate(680, 200)">
+                    <rect x="0" y="45" width="85" height="75" fill="#1a1008"/>
+                    <polygon points="-5,45 42,-8 90,45" fill="#2a1510"/>
+                    <rect x="60" y="2" width="11" height="28" fill="#201008"/>
+                    <rect class="window dim-window" x="10" y="60" width="25" height="32" fill="#3a2810" rx="2"/>
+                    <rect class="window dim-window" x="50" y="60" width="25" height="32" fill="#3a2810" rx="2"/>
+                    <rect x="30" y="92" width="24" height="28" fill="#0a0505" rx="2"/>
                 </g>
 
-                <!-- House 7 - Wide manor right -->
-                <g class="house house-7" transform="translate(950, 170)">
-                    <!-- House body -->
-                    <rect x="0" y="55" width="140" height="100" fill="#2d1f15"/>
-                    <!-- Roof -->
-                    <polygon points="-5,55 70,-20 145,55" fill="#4d3525"/>
-                    <!-- Chimney -->
-                    <rect x="100" y="0" width="16" height="40" fill="#3d2518"/>
-                    <!-- Windows - symmetrical, 3 across -->
-                    <rect class="window glow-window" x="15" y="75" width="30" height="38" fill="#ffa550" rx="2"/>
-                    <rect class="window glow-window" x="55" y="75" width="30" height="38" fill="#ffb870" rx="2"/>
-                    <rect class="window glow-window" x="95" y="75" width="30" height="38" fill="#ff9940" rx="2"/>
-                    <!-- Door -->
-                    <rect x="55" y="125" width="30" height="35" fill="#1a0f0a" rx="2"/>
-                    <!-- Wreath -->
-                    <circle cx="70" cy="135" r="8" fill="none" stroke="#2d5a2d" stroke-width="4"/>
-                    <circle cx="70" cy="128" r="3" fill="#ff0000"/>
-                    <!-- Christmas lights on roofline -->
-                    <g class="christmas-lights">
-                        <circle cx="5" cy="55" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="22" cy="40" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="40" cy="25" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="55" cy="15" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="70" cy="10" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="85" cy="15" r="3" fill="#ffff00" class="light-yellow"/>
-                        <circle cx="100" cy="25" r="3" fill="#00ff00" class="light-green"/>
-                        <circle cx="118" cy="40" r="3" fill="#ff0000" class="light-red"/>
-                        <circle cx="135" cy="55" r="3" fill="#ffff00" class="light-yellow"/>
-                    </g>
+                <!-- House 6 - Plain tall narrow (jealous) -->
+                <g class="house house-plain" transform="translate(800, 170)">
+                    <rect x="0" y="55" width="75" height="100" fill="#1d1210"/>
+                    <polygon points="-5,55 37,-12 80,55" fill="#2d1815"/>
+                    <rect x="52" y="8" width="11" height="32" fill="#1a0d08"/>
+                    <rect class="window dim-window" x="10" y="75" width="22" height="28" fill="#3a2810" rx="2"/>
+                    <rect class="window dim-window" x="43" y="75" width="22" height="28" fill="#3a2810" rx="2"/>
+                    <rect x="25" y="130" width="24" height="28" fill="#0a0505" rx="2"/>
+                </g>
+
+                <!-- House 7 - Plain wide house (jealous) -->
+                <g class="house house-plain" transform="translate(910, 185)">
+                    <rect x="0" y="50" width="110" height="85" fill="#1a1008"/>
+                    <polygon points="-5,50 55,-18 115,50" fill="#2a1510"/>
+                    <rect x="80" y="2" width="14" height="35" fill="#201008"/>
+                    <rect class="window dim-window" x="15" y="70" width="28" height="35" fill="#3a2810" rx="2"/>
+                    <rect class="window dim-window" x="67" y="70" width="28" height="35" fill="#3a2810" rx="2"/>
+                    <rect x="42" y="105" width="26" height="30" fill="#0a0505" rx="2"/>
                 </g>
 
                 <!-- Pine trees with trunks -->
-                <g class="tree" transform="translate(10, 240)">
-                    <rect x="20" y="75" width="10" height="25" fill="#4a3020"/>
-                    <polygon points="25,0 0,75 50,75" fill="#1a3a1a"/>
-                    <polygon points="25,20 8,65 42,65" fill="#2d4a2d"/>
+                <g class="tree" transform="translate(30, 250)">
+                    <rect x="18" y="65" width="9" height="22" fill="#3a2515"/>
+                    <polygon points="22,0 0,65 44,65" fill="#0f2a0f"/>
+                    <polygon points="22,18 8,55 36,55" fill="#1a3a1a"/>
                 </g>
-                <g class="tree" transform="translate(130, 260)">
-                    <rect x="16" y="55" width="8" height="20" fill="#4a3020"/>
-                    <polygon points="20,0 0,55 40,55" fill="#1a3a1a"/>
-                    <polygon points="20,15 8,48 32,48" fill="#2d4a2d"/>
+                <g class="tree" transform="translate(150, 265)">
+                    <rect x="14" y="50" width="7" height="18" fill="#3a2515"/>
+                    <polygon points="17,0 0,50 34,50" fill="#0f2a0f"/>
+                    <polygon points="17,14 6,42 28,42" fill="#1a3a1a"/>
                 </g>
-                <g class="tree" transform="translate(280, 255)">
-                    <rect x="14" y="50" width="8" height="18" fill="#4a3020"/>
-                    <polygon points="18,0 0,50 36,50" fill="#1a3a1a"/>
-                    <polygon points="18,12 6,42 30,42" fill="#2d4a2d"/>
+                <g class="tree" transform="translate(440, 270)">
+                    <rect x="12" y="42" width="7" height="16" fill="#3a2515"/>
+                    <polygon points="15,0 0,42 30,42" fill="#0f2a0f"/>
+                    <polygon points="15,12 5,35 25,35" fill="#1a3a1a"/>
                 </g>
-                <g class="tree" transform="translate(630, 265)">
-                    <rect x="12" y="45" width="8" height="18" fill="#4a3020"/>
-                    <polygon points="16,0 0,45 32,45" fill="#1a3a1a"/>
-                    <polygon points="16,12 5,38 27,38" fill="#2d4a2d"/>
+                <!-- Lit tree near featured house -->
+                <g class="tree lit-tree" transform="translate(620, 255)">
+                    <rect x="14" y="55" width="8" height="20" fill="#3a2515"/>
+                    <polygon points="18,0 0,55 36,55" fill="#1a4a1a"/>
+                    <polygon points="18,15 6,46 30,46" fill="#2d5a2d"/>
+                    <!-- Tree lights -->
+                    <circle cx="8" cy="45" r="2.5" class="light-red tree-light"/>
+                    <circle cx="28" cy="42" r="2.5" class="light-yellow tree-light"/>
+                    <circle cx="12" cy="32" r="2.5" class="light-green tree-light"/>
+                    <circle cx="24" cy="28" r="2.5" class="light-blue tree-light"/>
+                    <circle cx="18" cy="18" r="2.5" class="light-red tree-light"/>
+                    <circle cx="18" cy="5" r="4" class="light-star tree-light"/>
                 </g>
-                <g class="tree" transform="translate(780, 260)">
-                    <rect x="14" y="50" width="8" height="18" fill="#4a3020"/>
-                    <polygon points="18,0 0,50 36,50" fill="#1a3a1a"/>
-                    <polygon points="18,12 6,42 30,42" fill="#2d4a2d"/>
+                <g class="tree" transform="translate(770, 268)">
+                    <rect x="12" y="42" width="7" height="16" fill="#3a2515"/>
+                    <polygon points="15,0 0,42 30,42" fill="#0f2a0f"/>
+                    <polygon points="15,12 5,35 25,35" fill="#1a3a1a"/>
                 </g>
-                <g class="tree" transform="translate(1120, 245)">
-                    <rect x="18" y="65" width="10" height="22" fill="#4a3020"/>
-                    <polygon points="22,0 0,65 44,65" fill="#1a3a1a"/>
-                    <polygon points="22,18 8,55 36,55" fill="#2d4a2d"/>
-                </g>
-                <g class="tree" transform="translate(1200, 265)">
-                    <rect x="12" y="45" width="8" height="18" fill="#4a3020"/>
-                    <polygon points="15,0 0,45 30,45" fill="#1a3a1a"/>
-                    <polygon points="15,12 5,38 25,38" fill="#2d4a2d"/>
+                <g class="tree" transform="translate(1050, 255)">
+                    <rect x="16" y="58" width="8" height="20" fill="#3a2515"/>
+                    <polygon points="20,0 0,58 40,58" fill="#0f2a0f"/>
+                    <polygon points="20,16 7,48 33,48" fill="#1a3a1a"/>
                 </g>
 
-                <!-- Lamp posts with glow -->
-                <g class="lamp-post" transform="translate(300, 220)">
-                    <rect x="3" y="25" width="4" height="55" fill="#1a1a1a"/>
-                    <circle class="lamp-glow" cx="5" cy="18" r="15" fill="url(#lampGlow)"/>
-                    <rect x="0" y="12" width="10" height="14" fill="#2a2a2a" rx="2"/>
-                </g>
-                <g class="lamp-post" transform="translate(600, 230)">
+                <!-- Lamp posts -->
+                <g class="lamp-post" transform="translate(265, 230)">
                     <rect x="3" y="25" width="4" height="50" fill="#1a1a1a"/>
-                    <circle class="lamp-glow" cx="5" cy="18" r="15" fill="url(#lampGlow)"/>
+                    <circle class="lamp-glow" cx="5" cy="18" r="12" fill="url(#lampGlowDim)"/>
+                    <rect x="0" y="12" width="10" height="12" fill="#2a2a2a" rx="2"/>
+                </g>
+                <!-- Bright lamp near featured house -->
+                <g class="lamp-post" transform="translate(455, 225)">
+                    <rect x="3" y="25" width="4" height="52" fill="#1a1a1a"/>
+                    <circle class="lamp-glow bright-lamp" cx="5" cy="18" r="18" fill="url(#lampGlow)"/>
                     <rect x="0" y="12" width="10" height="14" fill="#2a2a2a" rx="2"/>
                 </g>
-                <g class="lamp-post" transform="translate(920, 225)">
-                    <rect x="3" y="25" width="4" height="52" fill="#1a1a1a"/>
-                    <circle class="lamp-glow" cx="5" cy="18" r="15" fill="url(#lampGlow)"/>
-                    <rect x="0" y="12" width="10" height="14" fill="#2a2a2a" rx="2"/>
+                <g class="lamp-post" transform="translate(870, 232)">
+                    <rect x="3" y="25" width="4" height="48" fill="#1a1a1a"/>
+                    <circle class="lamp-glow" cx="5" cy="18" r="12" fill="url(#lampGlowDim)"/>
+                    <rect x="0" y="12" width="10" height="12" fill="#2a2a2a" rx="2"/>
                 </g>
 
                 <!-- Gradients and filters -->
                 <defs>
+                    <!-- Bright lamp glow -->
                     <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#ffdd88" stop-opacity="0.9"/>
-                        <stop offset="50%" stop-color="#ffaa44" stop-opacity="0.4"/>
-                        <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+                        <stop offset="0%" stop-color="#ffee99" stop-opacity="0.95"/>
+                        <stop offset="40%" stop-color="#ffcc44" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="#ff9900" stop-opacity="0"/>
+                    </radialGradient>
+                    <!-- Dim lamp glow for jealous area -->
+                    <radialGradient id="lampGlowDim" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#aa9966" stop-opacity="0.4"/>
+                        <stop offset="50%" stop-color="#886633" stop-opacity="0.2"/>
+                        <stop offset="100%" stop-color="#664400" stop-opacity="0"/>
                     </radialGradient>
                     <linearGradient id="snowGround" x1="0%" y1="0%" x2="0%" y2="100%">
                         <stop offset="0%" stop-color="#e8f0f8"/>
                         <stop offset="100%" stop-color="#c0d8e8"/>
                     </linearGradient>
-                    <!-- Glow filter for Christmas lights -->
-                    <filter id="lightGlow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                    <!-- Spectacular light glow gradient -->
+                    <radialGradient id="spectacularGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+                        <stop offset="30%" stop-color="#ffffaa" stop-opacity="0.8"/>
+                        <stop offset="100%" stop-color="#ffcc00" stop-opacity="0"/>
+                    </radialGradient>
+                    <!-- House glow for featured house -->
+                    <filter id="houseGlow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="8" result="blur"/>
                         <feMerge>
-                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="blur"/>
                             <feMergeNode in="SourceGraphic"/>
                         </feMerge>
                     </filter>

@@ -453,6 +453,38 @@ button {
     50% { opacity: 0.65; filter: drop-shadow(0 0 3px #ffff33) drop-shadow(0 0 5px #ffff00); }
 }
 
+/* Blue lights */
+.light-blue {
+    fill: #33ccff;
+    filter: drop-shadow(0 0 6px #33ccff) drop-shadow(0 0 10px #00aaff);
+    animation: light-twinkle-blue 1.7s infinite ease-in-out;
+}
+
+@keyframes light-twinkle-blue {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #33ccff) drop-shadow(0 0 10px #00aaff); }
+    50% { opacity: 0.65; filter: drop-shadow(0 0 3px #33ccff) drop-shadow(0 0 5px #00aaff); }
+}
+
+/* Star light - extra bright */
+.light-star {
+    fill: #ffffcc;
+    filter: drop-shadow(0 0 10px #ffffaa) drop-shadow(0 0 20px #ffdd00) drop-shadow(0 0 30px #ffaa00);
+    animation: light-star-pulse 2s infinite ease-in-out;
+}
+
+@keyframes light-star-pulse {
+    0%, 100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 10px #ffffaa) drop-shadow(0 0 20px #ffdd00) drop-shadow(0 0 30px #ffaa00);
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        filter: drop-shadow(0 0 15px #ffffcc) drop-shadow(0 0 30px #ffee00) drop-shadow(0 0 45px #ffcc00);
+        transform: scale(1.15);
+    }
+}
+
 /* Stagger the light animations */
 .christmas-lights circle:nth-child(odd) {
     animation-delay: 0.3s;
@@ -464,6 +496,135 @@ button {
 
 .christmas-lights circle:nth-child(5n) {
     animation-delay: 0.9s;
+}
+
+/* ========================================
+   JEALOUS VS FEATURED HOUSE STYLES
+======================================== */
+
+/* Dim windows for jealous/plain houses */
+.dim-window {
+    fill: #3a2810;
+    filter: none;
+    opacity: 0.7;
+}
+
+/* Some jealous houses have slightly warmer (but still dim) windows - they want lights too */
+.house-plain:nth-child(3) .dim-window {
+    fill: #4a3818;
+    opacity: 0.8;
+}
+
+/* Bright windows for featured house */
+.bright-window {
+    filter: drop-shadow(0 0 15px rgba(255, 200, 60, 0.9))
+            drop-shadow(0 0 30px rgba(255, 180, 40, 0.6))
+            drop-shadow(0 0 50px rgba(255, 150, 20, 0.3));
+    animation: bright-window-glow 3s infinite ease-in-out;
+}
+
+@keyframes bright-window-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 15px rgba(255, 200, 60, 0.9))
+                drop-shadow(0 0 30px rgba(255, 180, 40, 0.6))
+                drop-shadow(0 0 50px rgba(255, 150, 20, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 220, 80, 1))
+                drop-shadow(0 0 40px rgba(255, 200, 60, 0.7))
+                drop-shadow(0 0 60px rgba(255, 170, 40, 0.4));
+    }
+}
+
+/* Featured house - ambient glow around the whole house */
+.house-featured {
+    filter: drop-shadow(0 0 40px rgba(255, 200, 100, 0.3))
+            drop-shadow(0 0 80px rgba(255, 180, 80, 0.15));
+}
+
+/* Spectacular roof lights - bigger glow */
+.roof-lights circle {
+    filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 15px currentColor);
+}
+
+/* Eave lights - subtle gradient shimmer */
+.eave-lights circle {
+    animation-duration: 1.2s;
+}
+
+/* Window frame lights - delicate */
+.window-lights circle {
+    opacity: 0.95;
+}
+
+/* Door frame lights */
+.door-lights circle {
+    animation-duration: 1.4s;
+}
+
+/* Yard lights - ground level glow */
+.yard-lights circle {
+    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor);
+    animation-duration: 2s;
+}
+
+/* Tree lights near featured house */
+.tree-light {
+    filter: drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor);
+}
+
+/* Lit tree is brighter */
+.lit-tree polygon {
+    filter: drop-shadow(0 0 10px rgba(100, 200, 100, 0.3));
+}
+
+/* Bright lamp near featured house */
+.bright-lamp {
+    animation: bright-lamp-pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes bright-lamp-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 0 20px rgba(255, 230, 150, 0.5));
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 30px rgba(255, 240, 180, 0.6));
+    }
+}
+
+/* Chimney smoke animation */
+.chimney-smoke circle {
+    animation: smoke-rise 4s infinite ease-out;
+}
+
+.chimney-smoke circle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.chimney-smoke circle:nth-child(2) {
+    animation-delay: 1.3s;
+}
+
+.chimney-smoke circle:nth-child(3) {
+    animation-delay: 2.6s;
+}
+
+@keyframes smoke-rise {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(1.5);
+    }
 }
 
 /* Hero Content */
