@@ -47,7 +47,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-light);
-    background: linear-gradient(180deg, var(--deep-frozen-blue) 0%, var(--primary-blue) 50%, var(--ice-blue) 100%);
+    background: var(--deep-frozen-blue);
     background-attachment: fixed;
     overflow-x: hidden;
     position: relative;
@@ -666,7 +666,7 @@ section {
 ======================================== */
 
 .gallery {
-    background: linear-gradient(180deg, var(--ice-blue) 0%, var(--deep-frozen-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -714,6 +714,66 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(27, 40, 56, 0.9) 100%);
     border: 1px solid rgba(255, 215, 0, 0.2);
+    position: relative;
+}
+
+/* Animated chasing lights effect for gallery cards */
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 20%,
+        #ff0000 22%,
+        transparent 24%,
+        transparent 30%,
+        #00ff00 32%,
+        transparent 34%,
+        transparent 40%,
+        #FFD700 42%,
+        transparent 44%,
+        transparent 50%,
+        #ff0000 52%,
+        transparent 54%,
+        transparent 60%,
+        #00ff00 62%,
+        transparent 64%,
+        transparent 70%,
+        #FFD700 72%,
+        transparent 74%,
+        transparent 80%,
+        #ff0000 82%,
+        transparent 84%,
+        transparent 90%,
+        #00ff00 92%,
+        transparent 94%,
+        transparent 100%
+    );
+    background-size: 400% 100%;
+    animation: chasingLightsGallery 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+@keyframes chasingLightsGallery {
+    0% { background-position: 400% 0; }
+    100% { background-position: 0% 0; }
 }
 
 .gallery-item:hover {
@@ -747,7 +807,7 @@ section {
 ======================================== */
 
 .service-section {
-    background: linear-gradient(180deg, var(--primary-blue) 0%, var(--ice-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -838,7 +898,8 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--primary-blue);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+    border: 2px solid rgba(255, 215, 0, 0.5);
     color: var(--white);
     display: flex;
     align-items: center;
@@ -886,7 +947,7 @@ section {
 ======================================== */
 
 .why-professional {
-    background: linear-gradient(180deg, var(--deep-frozen-blue) 0%, var(--primary-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -927,6 +988,79 @@ section {
     border-radius: 12px;
     border: 1px solid rgba(255, 215, 0, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated chasing lights effect */
+.comparison-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 20%,
+        #ff0000 22%,
+        transparent 24%,
+        transparent 30%,
+        #00ff00 32%,
+        transparent 34%,
+        transparent 40%,
+        #FFD700 42%,
+        transparent 44%,
+        transparent 50%,
+        #ff0000 52%,
+        transparent 54%,
+        transparent 60%,
+        #00ff00 62%,
+        transparent 64%,
+        transparent 70%,
+        #FFD700 72%,
+        transparent 74%,
+        transparent 80%,
+        #ff0000 82%,
+        transparent 84%,
+        transparent 90%,
+        #00ff00 92%,
+        transparent 94%,
+        transparent 100%
+    );
+    background-size: 400% 100%;
+    animation: chasingLights 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.comparison-column:hover::before {
+    opacity: 1;
+}
+
+@keyframes chasingLights {
+    0% { background-position: 400% 0; }
+    100% { background-position: 0% 0; }
+}
+
+.comparison-column::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(27, 40, 56, 0.95) 100%);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.comparison-column > * {
+    position: relative;
+    z-index: 1;
 }
 
 .comparison-icon {
@@ -996,11 +1130,12 @@ section {
 }
 
 .value-proposition {
-    background-color: var(--primary-blue);
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(27, 40, 56, 0.8) 100%);
     color: var(--white);
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 40px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .value-math {
@@ -1019,7 +1154,7 @@ section {
 ======================================== */
 
 .testimonials {
-    background: linear-gradient(180deg, var(--ice-blue) 0%, var(--deep-frozen-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -1104,17 +1239,78 @@ section {
 }
 
 .testimonial-card {
-    background: linear-gradient(135deg, rgba(10, 22, 40, 0.7) 0%, rgba(27, 40, 56, 0.7) 100%);
-    padding: 30px;
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(27, 40, 56, 0.8) 100%);
+    padding: 40px 30px;
     border-radius: 12px;
     border: 1px solid rgba(255, 215, 0, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Testimonial card icon (matching Why Professional section) */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg 340deg,
+        rgba(255, 215, 0, 0.3) 340deg 360deg
+    );
+    animation: testimonialGlow 6s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes testimonialGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(27, 40, 56, 0.95) 100%);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.testimonial-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 215, 0, 0.15);
+    color: var(--accent-gold);
+}
+
+.testimonial-icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .testimonial-stars {
     color: var(--accent-gold);
     font-size: 20px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .testimonial-text {
@@ -1134,9 +1330,10 @@ section {
 .social-proof-stats {
     text-align: center;
     padding: 30px;
-    background-color: var(--primary-blue);
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(27, 40, 56, 0.8) 100%);
     color: var(--white);
     border-radius: 12px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .stats-line {
@@ -1149,7 +1346,7 @@ section {
 ======================================== */
 
 .local-credibility {
-    background: linear-gradient(180deg, var(--primary-blue) 0%, var(--ice-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -1397,7 +1594,7 @@ section {
 ======================================== */
 
 .faq {
-    background: linear-gradient(180deg, var(--deep-frozen-blue) 0%, var(--primary-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -1487,7 +1684,7 @@ section {
 ======================================== */
 
 .urgency {
-    background: linear-gradient(180deg, var(--ice-blue) 0%, var(--deep-frozen-blue) 100%);
+    background: var(--deep-frozen-blue);
     position: relative;
 }
 
@@ -1601,7 +1798,7 @@ section {
 ======================================== */
 
 .conversion-form {
-    background: linear-gradient(180deg, var(--primary-blue) 0%, var(--ice-blue) 100%);
+    background: var(--deep-frozen-blue);
     padding: 80px 0;
     position: relative;
 }
@@ -1668,7 +1865,7 @@ section {
 ======================================== */
 
 .site-footer {
-    background-color: var(--primary-blue);
+    background-color: var(--deep-frozen-blue);
     color: var(--white);
     padding: 60px 0 30px;
 }
@@ -2373,4 +2570,204 @@ body.modal-open {
     animation-duration: 10s;
     animation-delay: 5s;
     font-size: 1.5em;
+}
+
+/* ========================================
+   HANGING CHRISTMAS LIGHTS BORDER
+======================================== */
+
+.christmas-lights-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+}
+
+.light-strand {
+    position: absolute;
+    display: flex;
+}
+
+/* Left strand - vertical with droop effect */
+.light-strand-left {
+    left: 8px;
+    top: 80px;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+}
+
+/* Right strand - vertical with droop effect */
+.light-strand-right {
+    right: 8px;
+    top: 80px;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+}
+
+/* Top strand - horizontal with droop effect */
+.light-strand-top {
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+/* Wire between bulbs */
+.light-strand-left::before,
+.light-strand-right::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #1a1a1a;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.light-strand-top::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* Light bulb base styles */
+.light-bulb {
+    width: 12px;
+    height: 18px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    margin: 8px auto;
+    animation: bulbGlow 2s ease-in-out infinite;
+    box-shadow: 0 0 8px currentColor, 0 0 15px currentColor, 0 0 25px currentColor;
+}
+
+.light-strand-top .light-bulb {
+    margin: auto 0;
+    transform: translateY(3px);
+}
+
+/* Bulb cap */
+.light-bulb::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    background: #2a2a2a;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px 2px 0 0;
+}
+
+/* Drooping wire for top strand */
+.light-strand-top .light-bulb::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    border: 2px solid transparent;
+    border-bottom-color: #1a1a1a;
+    border-radius: 0 0 50% 50%;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Color variations */
+.light-bulb.red {
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #dc2626, #991b1b);
+    color: #ff0000;
+    animation-delay: 0s;
+}
+
+.light-bulb.green {
+    background: radial-gradient(circle at 30% 30%, #6bff6b, #22c55e, #166534);
+    color: #00ff00;
+    animation-delay: 0.3s;
+}
+
+.light-bulb.gold {
+    background: radial-gradient(circle at 30% 30%, #ffd700, #f59e0b, #b45309);
+    color: #ffd700;
+    animation-delay: 0.6s;
+}
+
+/* Bulb glow animation */
+@keyframes bulbGlow {
+    0%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 0.7;
+        filter: brightness(1.3);
+    }
+}
+
+/* Staggered animations for different bulbs */
+.light-bulb:nth-child(3n+1) { animation-delay: 0s; }
+.light-bulb:nth-child(3n+2) { animation-delay: 0.4s; }
+.light-bulb:nth-child(3n) { animation-delay: 0.8s; }
+
+/* Chase animation for bulbs */
+.light-strand-top .light-bulb:nth-child(1) { animation-delay: 0s; }
+.light-strand-top .light-bulb:nth-child(2) { animation-delay: 0.1s; }
+.light-strand-top .light-bulb:nth-child(3) { animation-delay: 0.2s; }
+.light-strand-top .light-bulb:nth-child(4) { animation-delay: 0.3s; }
+.light-strand-top .light-bulb:nth-child(5) { animation-delay: 0.4s; }
+.light-strand-top .light-bulb:nth-child(6) { animation-delay: 0.5s; }
+.light-strand-top .light-bulb:nth-child(7) { animation-delay: 0.6s; }
+.light-strand-top .light-bulb:nth-child(8) { animation-delay: 0.7s; }
+.light-strand-top .light-bulb:nth-child(9) { animation-delay: 0.8s; }
+.light-strand-top .light-bulb:nth-child(10) { animation-delay: 0.9s; }
+.light-strand-top .light-bulb:nth-child(11) { animation-delay: 1s; }
+.light-strand-top .light-bulb:nth-child(12) { animation-delay: 1.1s; }
+.light-strand-top .light-bulb:nth-child(13) { animation-delay: 1.2s; }
+.light-strand-top .light-bulb:nth-child(14) { animation-delay: 1.3s; }
+.light-strand-top .light-bulb:nth-child(15) { animation-delay: 1.4s; }
+.light-strand-top .light-bulb:nth-child(16) { animation-delay: 1.5s; }
+.light-strand-top .light-bulb:nth-child(17) { animation-delay: 1.6s; }
+.light-strand-top .light-bulb:nth-child(18) { animation-delay: 1.7s; }
+.light-strand-top .light-bulb:nth-child(19) { animation-delay: 1.8s; }
+.light-strand-top .light-bulb:nth-child(20) { animation-delay: 1.9s; }
+.light-strand-top .light-bulb:nth-child(21) { animation-delay: 0s; }
+.light-strand-top .light-bulb:nth-child(22) { animation-delay: 0.1s; }
+.light-strand-top .light-bulb:nth-child(23) { animation-delay: 0.2s; }
+.light-strand-top .light-bulb:nth-child(24) { animation-delay: 0.3s; }
+.light-strand-top .light-bulb:nth-child(25) { animation-delay: 0.4s; }
+
+/* Hide on very small screens to avoid clutter */
+@media (max-width: 768px) {
+    .light-strand-left,
+    .light-strand-right {
+        display: none;
+    }
+
+    .light-strand-top {
+        padding: 0 15px;
+    }
+
+    .light-strand-top .light-bulb {
+        width: 10px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .christmas-lights-border {
+        display: none;
+    }
 }
