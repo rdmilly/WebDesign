@@ -526,6 +526,17 @@ button {
     50% { opacity: 0.65; filter: drop-shadow(0 0 3px #33ccff) drop-shadow(0 0 5px #00aaff); }
 }
 
+.light-purple {
+    fill: #cc33ff;
+    filter: drop-shadow(0 0 6px #cc33ff) drop-shadow(0 0 10px #aa00ff);
+    animation: light-twinkle-purple 1.9s infinite ease-in-out;
+}
+
+@keyframes light-twinkle-purple {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #cc33ff) drop-shadow(0 0 10px #aa00ff); }
+    50% { opacity: 0.65; filter: drop-shadow(0 0 3px #cc33ff) drop-shadow(0 0 5px #aa00ff); }
+}
+
 /* Star light - extra bright */
 .light-star {
     fill: #ffffcc;
@@ -732,7 +743,7 @@ button {
         transparent 60%,
         transparent 100%
     );
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     animation: guide-shimmer 4s ease-in-out infinite;
 }
 
@@ -874,7 +885,7 @@ button {
         #ffd700 60%,
         #ffd700 100%
     );
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -897,7 +908,7 @@ button {
         #ffd700 60%,
         #ffd700 100%
     );
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1397,16 +1408,13 @@ section {
     width: 80px;
     height: 4px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8));
-    background-size: 200% 100%;
-    animation: light-chase 2s linear infinite;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
+    animation: light-chase 4s linear infinite;
     margin: 0 10px;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(255, 200, 100, 0.5);
@@ -1566,20 +1574,16 @@ section {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -1;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .value-proposition::after {
@@ -2973,9 +2977,12 @@ body.modal-open {
 
 /* === ANIMATED LIGHT BORDER EFFECT === */
 @keyframes light-chase {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+    0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+    50% { background-position: 150% 50%; filter: hue-rotate(180deg); }
+    100% { background-position: 300% 50%; filter: hue-rotate(360deg); }
 }
+
+/* Match FAQ timing - 4s for smooth, slower chase effect */
 
 @keyframes light-chase-reverse {
     0% { background-position: 200% 50%; }
@@ -3003,10 +3010,10 @@ body.modal-open {
         #ff3333, #33ff33, #ffff33, #33ccff,
         #ff3333, #33ff33, #ffff33, #33ccff,
         #ff3333);
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -1;
-    animation: light-chase 3s linear infinite;
+    animation: light-chase 4s linear infinite;
     filter: blur(1px);
 }
 
@@ -3026,20 +3033,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -1;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .gallery-item::after {
@@ -3084,20 +3087,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 18px;
     z-index: -1;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .service-column::after {
@@ -3155,12 +3154,13 @@ body.modal-open {
 
 .timeline-line {
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8));
-    background-size: 200% 100%;
-    animation: light-chase 2s linear infinite;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
+    animation: light-chase 4s linear infinite;
     height: 4px;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(255, 200, 100, 0.5);
@@ -3183,20 +3183,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -1;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .comparison-column::after {
@@ -3242,20 +3238,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -1;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .testimonial-card::after {
@@ -3300,20 +3292,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 18px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .google-review-banner::after {
@@ -3345,20 +3333,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .value-proposition::after {
@@ -3392,10 +3376,10 @@ body.modal-open {
         rgba(255, 215, 0, 0.8),
         rgba(255, 107, 53, 0.6),
         rgba(255, 215, 0, 0.8));
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -1;
-    animation: light-chase 3s linear infinite;
+    animation: light-chase 4s linear infinite;
 }
 
 /* === FAQ SECTION === */
@@ -3431,20 +3415,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .social-proof-stats::after {
@@ -3561,20 +3541,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .credentials::after {
@@ -3606,21 +3582,17 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
     animation-delay: 0.5s;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .service-area::after {
@@ -3663,7 +3635,7 @@ body.modal-open {
         rgba(255, 255, 51, 0.8),
         rgba(51, 204, 255, 0.8),
         rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     border-radius: 10px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
@@ -3708,20 +3680,16 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 10px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .availability-notice::after {
@@ -3753,21 +3721,17 @@ body.modal-open {
     right: -3px;
     bottom: -3px;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     border-radius: 14px;
     z-index: -2;
     animation: light-chase 4s linear infinite;
     animation-delay: 0.5s;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .urgency-benefit::after {
@@ -3786,16 +3750,12 @@ body.modal-open {
 .jobber-form-container {
     position: relative;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8),
-        rgba(51, 255, 51, 0.8),
-        rgba(255, 255, 51, 0.8),
-        rgba(51, 204, 255, 0.8),
-        rgba(255, 51, 51, 0.8));
-    background-size: 200% 100%;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%);
+    background-size: 300% 100%;
     animation: light-chase 4s linear infinite;
     padding: 3px;
     border-radius: 14px;
@@ -3833,7 +3793,7 @@ body.modal-open {
         rgba(255, 255, 51, 0.8),
         rgba(51, 204, 255, 0.8),
         rgba(255, 51, 51, 0.8)) !important;
-    background-size: 200% 100% !important;
+    background-size: 300% 100% !important;
     border-radius: 10px !important;
     z-index: -2 !important;
     animation: light-chase 4s linear infinite !important;
@@ -3927,7 +3887,7 @@ body.modal-open {
     background-size: 300% 100% !important;
     border-radius: 11px !important;
     z-index: 1 !important;
-    animation: faq-chase 2s linear infinite !important;
+    animation: light-chase 4s linear infinite !important;
     pointer-events: none !important;
 }
 
