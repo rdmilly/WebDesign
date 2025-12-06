@@ -50,100 +50,15 @@
         "latitude": 45.3001,
         "longitude": -122.9734
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Newberg"
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.300118,
+          "longitude": -122.973157
         },
-        {
-          "@type": "City",
-          "name": "Dundee"
-        },
-        {
-          "@type": "City",
-          "name": "McMinnville"
-        },
-        {
-          "@type": "City",
-          "name": "Sherwood"
-        },
-        {
-          "@type": "City",
-          "name": "Wilsonville"
-        },
-        {
-          "@type": "City",
-          "name": "Tigard"
-        },
-        {
-          "@type": "City",
-          "name": "Tualatin"
-        },
-        {
-          "@type": "City",
-          "name": "Lake Oswego"
-        },
-        {
-          "@type": "City",
-          "name": "West Linn"
-        },
-        {
-          "@type": "City",
-          "name": "Oregon City"
-        },
-        {
-          "@type": "City",
-          "name": "Portland"
-        },
-        {
-          "@type": "City",
-          "name": "Beaverton"
-        },
-        {
-          "@type": "City",
-          "name": "Hillsboro"
-        },
-        {
-          "@type": "City",
-          "name": "Forest Grove"
-        },
-        {
-          "@type": "City",
-          "name": "Cornelius"
-        },
-        {
-          "@type": "City",
-          "name": "Dayton"
-        },
-        {
-          "@type": "City",
-          "name": "Lafayette"
-        },
-        {
-          "@type": "City",
-          "name": "Carlton"
-        },
-        {
-          "@type": "City",
-          "name": "Amity"
-        },
-        {
-          "@type": "City",
-          "name": "Yamhill"
-        },
-        {
-          "@type": "City",
-          "name": "Woodburn"
-        },
-        {
-          "@type": "City",
-          "name": "Canby"
-        },
-        {
-          "@type": "City",
-          "name": "Salem"
-        }
-      ],
+        "geoRadius": "32187"
+      },
       "sameAs": [
         ""
       ]
@@ -198,8 +113,110 @@
         <div class="hero-background">
             <!-- Starry sky -->
             <div class="stars"></div>
-            <!-- Glowing moon -->
-            <div class="moon"></div>
+            <!-- Glowing moon - bigger -->
+            <div class="moon moon-large"></div>
+            
+            <!-- Santa's Sleigh with Reindeer -->
+            <div class="santa-sleigh-container">
+                <svg class="santa-sleigh" viewBox="0 0 400 120" preserveAspectRatio="xMidYMid meet">
+                    <!-- Magic trail/stardust behind sleigh -->
+                    <g class="magic-trail">
+                        <circle cx="10" cy="70" r="1.5" fill="#fffde8" opacity="0.3"/>
+                        <circle cx="25" cy="65" r="2" fill="#fffde8" opacity="0.4"/>
+                        <circle cx="40" cy="68" r="1" fill="#fffde8" opacity="0.5"/>
+                        <circle cx="55" cy="62" r="2.5" fill="#fffde8" opacity="0.4"/>
+                        <circle cx="70" cy="66" r="1.5" fill="#fffde8" opacity="0.6"/>
+                        <circle cx="85" cy="60" r="2" fill="#fffde8" opacity="0.5"/>
+                        <circle cx="100" cy="63" r="1" fill="#fffde8" opacity="0.7"/>
+                        <circle cx="115" cy="58" r="2.5" fill="#fffde8" opacity="0.6"/>
+                        <circle cx="130" cy="61" r="1.5" fill="#fffde8" opacity="0.8"/>
+                    </g>
+                    
+                    <!-- Reindeer 1 (front) -->
+                    <g class="reindeer" transform="translate(320, 45)">
+                        <!-- Body -->
+                        <ellipse cx="0" cy="12" rx="12" ry="8" fill="#1a2a3a"/>
+                        <!-- Head -->
+                        <circle cx="15" cy="5" r="6" fill="#1a2a3a"/>
+                        <!-- Antlers -->
+                        <path d="M18 -2 Q22 -10 18 -15 M20 -8 Q25 -10 27 -8" stroke="#1a2a3a" stroke-width="2" fill="none"/>
+                        <path d="M14 -2 Q10 -10 14 -15 M12 -8 Q7 -10 5 -8" stroke="#1a2a3a" stroke-width="2" fill="none"/>
+                        <!-- Legs -->
+                        <line x1="-8" y1="18" x2="-12" y2="32" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="-2" y1="18" x2="2" y2="32" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="5" y1="18" x2="8" y2="30" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="10" y1="16" x2="15" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <!-- Harness line -->
+                        <line x1="-12" y1="12" x2="-30" y2="15" stroke="#1a2a3a" stroke-width="1.5"/>
+                    </g>
+                    
+                    <!-- Reindeer 2 -->
+                    <g class="reindeer" transform="translate(280, 50)">
+                        <ellipse cx="0" cy="12" rx="11" ry="7" fill="#1a2a3a"/>
+                        <circle cx="14" cy="6" r="5" fill="#1a2a3a"/>
+                        <path d="M17 0 Q20 -7 17 -11 M18 -5 Q22 -7 24 -5" stroke="#1a2a3a" stroke-width="1.8" fill="none"/>
+                        <path d="M12 0 Q9 -7 12 -11 M11 -5 Q7 -7 5 -5" stroke="#1a2a3a" stroke-width="1.8" fill="none"/>
+                        <line x1="-7" y1="17" x2="-10" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="-1" y1="17" x2="2" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="5" y1="16" x2="8" y2="26" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="10" y1="14" x2="14" y2="24" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="-11" y1="12" x2="-28" y2="18" stroke="#1a2a3a" stroke-width="1.5"/>
+                    </g>
+                    
+                    <!-- Reindeer 3 -->
+                    <g class="reindeer" transform="translate(240, 55)">
+                        <ellipse cx="0" cy="12" rx="11" ry="7" fill="#1a2a3a"/>
+                        <circle cx="14" cy="6" r="5" fill="#1a2a3a"/>
+                        <path d="M17 0 Q20 -7 17 -11 M18 -5 Q22 -7 24 -5" stroke="#1a2a3a" stroke-width="1.8" fill="none"/>
+                        <path d="M12 0 Q9 -7 12 -11 M11 -5 Q7 -7 5 -5" stroke="#1a2a3a" stroke-width="1.8" fill="none"/>
+                        <line x1="-7" y1="17" x2="-10" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="-1" y1="17" x2="2" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="5" y1="16" x2="8" y2="26" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="10" y1="14" x2="14" y2="24" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="-11" y1="12" x2="-28" y2="20" stroke="#1a2a3a" stroke-width="1.5"/>
+                    </g>
+                    
+                    <!-- Reindeer 4 (back, near sleigh) -->
+                    <g class="reindeer" transform="translate(200, 58)">
+                        <ellipse cx="0" cy="12" rx="11" ry="7" fill="#1a2a3a"/>
+                        <circle cx="14" cy="6" r="5" fill="#1a2a3a"/>
+                        <path d="M17 0 Q20 -7 17 -11 M18 -5 Q22 -7 24 -5" stroke="#1a2a3a" stroke-width="1.8" fill="none"/>
+                        <path d="M12 0 Q9 -7 12 -11 M11 -5 Q7 -7 5 -5" stroke="#1a2a3a" stroke-width="1.8" fill="none"/>
+                        <line x1="-7" y1="17" x2="-10" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="-1" y1="17" x2="2" y2="28" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="5" y1="16" x2="8" y2="26" stroke="#1a2a3a" stroke-width="2"/>
+                        <line x1="10" y1="14" x2="14" y2="24" stroke="#1a2a3a" stroke-width="2"/>
+                        <!-- Harness to sleigh -->
+                        <line x1="-11" y1="14" x2="-40" y2="25" stroke="#1a2a3a" stroke-width="1.5"/>
+                    </g>
+                    
+                    <!-- Santa's Sleigh -->
+                    <g class="sleigh" transform="translate(140, 60)">
+                        <!-- Sleigh body -->
+                        <path d="M0 20 Q-5 10 5 5 L45 5 Q55 5 55 15 L55 25 Q55 35 45 38 L10 38 Q-10 38 -10 25 Z" fill="#1a2a3a"/>
+                        <!-- Sleigh runner -->
+                        <path d="M-10 38 Q-15 42 -5 45 L50 45 Q65 45 60 38" stroke="#1a2a3a" stroke-width="3" fill="none"/>
+                        <!-- Sleigh back curve -->
+                        <path d="M0 5 Q-8 0 -5 -10 Q0 -15 10 -12" fill="#1a2a3a"/>
+                        
+                        <!-- Santa silhouette -->
+                        <g transform="translate(15, -5)">
+                            <!-- Body -->
+                            <ellipse cx="12" cy="15" rx="14" ry="12" fill="#1a2a3a"/>
+                            <!-- Head -->
+                            <circle cx="12" cy="-2" r="9" fill="#1a2a3a"/>
+                            <!-- Hat -->
+                            <path d="M3 -5 Q2 -15 12 -18 Q22 -15 21 -5" fill="#1a2a3a"/>
+                            <circle cx="12" cy="-20" r="3" fill="#1a2a3a"/>
+                            <!-- Arm holding reins -->
+                            <path d="M26 8 Q35 0 45 5" stroke="#1a2a3a" stroke-width="4" fill="none"/>
+                        </g>
+                        
+                        <!-- Gift bag silhouette -->
+                        <ellipse cx="42" cy="12" rx="8" ry="12" fill="#1a2a3a"/>
+                    </g>
+                </svg>
+            </div>
             <!-- Floating particles -->
             <div class="magic-particles">
                 <span></span><span></span><span></span><span></span><span></span>
@@ -273,24 +290,26 @@
 
                     <!-- === SPECTACULAR CHRISTMAS LIGHTS === -->
 
-                    <!-- Roof peak lights - left slope -->
+                    <!-- Roof peak lights - left slope (follows roof from -8,55 to 65,-30) -->
+                    <!-- Slope: rise=-85, run=73, so for each 12px horizontal, drop ~14px -->
                     <g class="christmas-lights roof-lights">
-                        <circle cx="0" cy="55" r="4" class="light-red"/>
-                        <circle cx="12" cy="44" r="4" class="light-green"/>
-                        <circle cx="24" cy="33" r="4" class="light-yellow"/>
-                        <circle cx="36" cy="22" r="4" class="light-red"/>
-                        <circle cx="48" cy="11" r="4" class="light-green"/>
-                        <circle cx="60" cy="2" r="4" class="light-yellow"/>
-                        <circle cx="65" cy="-2" r="5" class="light-star"/>
+                        <circle cx="-2" cy="50" r="4" class="light-red"/>
+                        <circle cx="10" cy="36" r="4" class="light-green"/>
+                        <circle cx="22" cy="22" r="4" class="light-yellow"/>
+                        <circle cx="34" cy="8" r="4" class="light-red"/>
+                        <circle cx="46" cy="-6" r="4" class="light-green"/>
+                        <circle cx="58" cy="-20" r="4" class="light-yellow"/>
+                        <circle cx="65" cy="-28" r="5" class="light-star"/>
                     </g>
-                    <!-- Roof peak lights - right slope -->
+                    <!-- Roof peak lights - right slope (follows roof from 65,-30 to 138,55) -->
+                    <!-- Slope: rise=85, run=73, so for each 12px horizontal, rise ~14px -->
                     <g class="christmas-lights roof-lights">
-                        <circle cx="70" cy="2" r="4" class="light-yellow"/>
-                        <circle cx="82" cy="11" r="4" class="light-green"/>
-                        <circle cx="94" cy="22" r="4" class="light-red"/>
-                        <circle cx="106" cy="33" r="4" class="light-yellow"/>
-                        <circle cx="118" cy="44" r="4" class="light-green"/>
-                        <circle cx="130" cy="55" r="4" class="light-red"/>
+                        <circle cx="72" cy="-20" r="4" class="light-yellow"/>
+                        <circle cx="84" cy="-6" r="4" class="light-green"/>
+                        <circle cx="96" cy="8" r="4" class="light-red"/>
+                        <circle cx="108" cy="22" r="4" class="light-yellow"/>
+                        <circle cx="120" cy="36" r="4" class="light-green"/>
+                        <circle cx="132" cy="50" r="4" class="light-red"/>
                     </g>
 
                     <!-- Roofline bottom edge lights -->
@@ -490,10 +509,7 @@
 
         <!-- Content overlay -->
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-star">&#9733;</span>
-                <span>Trusted by 500+ Families in Yamhill County</span>
-            </div>
+
 
             <h1 class="hero-headline">
                 Bring the Magic of the<br>
@@ -538,10 +554,31 @@
                     <span>10+ Years</span>
                 </div>
                 <div class="trust-item-hero">
-                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="rating-stars" style="margin-right: 8px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                     <span>4.9 Rating</span>
                 </div>
             </div>
+
+            <!-- Free Guide Download CTA -->
+            <a href="#" class="free-guide-cta">
+                <div class="guide-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <polyline points="9 15 12 18 15 15"/>
+                    </svg>
+                </div>
+                <div class="guide-text">
+                    <span class="guide-label">FREE GUIDE</span>
+                    <span class="guide-title">Holiday Lights Decorating Tips</span>
+                </div>
+                <div class="guide-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -749,7 +786,7 @@
                         <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
                     </svg>
                     <div class="google-review-text">
-                        <div class="google-stars">★★★★★</div>
+                        <div class="google-stars" style="display: block; text-align: center;">★★★★★</div>
                         <div class="google-rating"><strong>4.9 out of 5</strong> based on 47+ Google reviews</div>
                     </div>
                 </div>
@@ -830,78 +867,64 @@
 
                 <div class="service-area">
                     <h3 class="service-area-title">Service Area Map</h3>
-                    <div class="service-area-map">
-                        <!-- Simplified Oregon County Map -->
-                        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background Oregon outline (simplified) -->
-                            <path d="M 50 50 L 350 50 L 350 450 L 50 450 Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-
-                            <!-- Multnomah County (Portland area) -->
-                            <path d="M 180 120 L 240 120 L 240 160 L 180 160 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
-
-                            <!-- Washington County (west of Portland) -->
-                            <path d="M 120 120 L 180 120 L 180 180 L 120 180 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
-
-                            <!-- Clackamas County (south of Portland) -->
-                            <path d="M 180 160 L 260 160 L 260 240 L 180 240 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
-
-                            <!-- Yamhill County (PRIMARY - highlighted more) -->
-                            <path d="M 100 180 L 180 180 L 180 260 L 100 260 Z" fill="rgba(255, 215, 0, 0.5)" stroke="rgba(255, 215, 0, 0.7)" stroke-width="3"/>
-
-                            <!-- Marion County (south, includes Salem) -->
-                            <path d="M 140 260 L 220 260 L 220 340 L 140 340 Z" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
-
-                            <!-- Legend -->
-                            <g transform="translate(20, 380)">
-                                <rect x="0" y="0" width="25" height="25" fill="rgba(255, 215, 0, 0.5)" stroke="rgba(255, 215, 0, 0.7)" stroke-width="2"/>
-                                <text x="35" y="18" font-size="14" fill="#FFFFFF" font-weight="bold">Primary Service Area</text>
-
-                                <rect x="0" y="35" width="25" height="25" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.5)" stroke-width="2"/>
-                                <text x="35" y="53" font-size="14" fill="#FFFFFF">Extended Service Area</text>
-                            </g>
-
-                            <!-- Star marker for Newberg -->
-                            <circle cx="140" cy="220" r="6" fill="#DC2626"/>
-                            <text x="155" y="225" font-size="14" fill="#FFFFFF" font-weight="bold">Newberg</text>
-                        </svg>
+                    <p style="text-align: center; color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 15px;">We serve all areas within 20 miles of Newberg, Oregon</p>
+                    <div class="service-area-map" style="padding: 0; background: transparent; border: none;">
+                        <!-- OpenStreetMap Embed with Service Area Circle Overlay -->
+                        <div id="service-area-map" style="width: 100%; height: 350px; border: 2px solid rgba(255, 215, 0, 0.5); border-radius: 12px; position: relative; overflow: hidden;">
+                            <!-- OpenStreetMap iframe (no API key needed) -->
+                            <iframe 
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-123.8%2C44.8%2C-122.1%2C45.8&layer=mapnik&marker=45.300118%2C-122.973157"
+                                style="width: 100%; height: 100%; border: none;"
+                                loading="lazy"
+                            ></iframe>
+                            <!-- SVG Circle Overlay -->
+                            <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 600 350" preserveAspectRatio="xMidYMid slice">
+                                <circle cx="300" cy="175" r="100" fill="rgba(212, 175, 55, 0.25)" stroke="#2C5530" stroke-width="4"/>
+                            </svg>
+                        </div>
                     </div>
 
                     <div class="counties-served">
-                        <h4 class="counties-title">Counties We Serve:</h4>
+                        <h4 class="counties-title">Counties Within Our 20-Mile Service Radius:</h4>
                         <div class="counties-grid">
                             <div class="county-item primary">
                                 <strong>Yamhill County</strong>
-                                <span class="county-badge">Primary</span>
+                                <span class="county-badge">Home Base</span>
                             </div>
                             <div class="county-item">Washington County</div>
                             <div class="county-item">Clackamas County</div>
                             <div class="county-item">Multnomah County</div>
                             <div class="county-item">Marion County</div>
+                            <div class="county-item">Polk County</div>
                         </div>
                     </div>
 
                     <details class="cities-details">
-                        <summary class="cities-summary">View All Cities We Serve</summary>
+                        <summary class="cities-summary">View All Cities We Serve (20-Mile Radius)</summary>
                         <div class="cities-by-county">
                             <div class="county-group">
-                                <h5>Yamhill County</h5>
-                                <p>Newberg, Dundee, McMinnville, Dayton, Lafayette, Carlton, Amity, Yamhill</p>
+                                <h5>Yamhill County (Home Base)</h5>
+                                <p>Newberg, Dundee, McMinnville, Dayton, Lafayette, Carlton, Amity, Yamhill, Sheridan, Willamina</p>
                             </div>
                             <div class="county-group">
                                 <h5>Washington County</h5>
-                                <p>Sherwood, Wilsonville, Tigard, Tualatin, Beaverton, Hillsboro, Forest Grove, Cornelius</p>
+                                <p>Sherwood, Tigard, Tualatin, King City, Durham, Beaverton, Hillsboro, Forest Grove, Cornelius, Gaston, Banks, North Plains</p>
                             </div>
                             <div class="county-group">
                                 <h5>Clackamas County</h5>
-                                <p>Lake Oswego, West Linn, Oregon City, Canby</p>
+                                <p>Wilsonville, Lake Oswego, West Linn, Oregon City, Canby, Aurora, Hubbard, Molalla</p>
                             </div>
                             <div class="county-group">
                                 <h5>Multnomah County</h5>
-                                <p>Portland</p>
+                                <p>Portland (SW), Lake Oswego, Milwaukie</p>
                             </div>
                             <div class="county-group">
                                 <h5>Marion County</h5>
-                                <p>Woodburn, Salem</p>
+                                <p>Woodburn, Salem, Keizer, St. Paul, Donald, Gervais</p>
+                            </div>
+                            <div class="county-group">
+                                <h5>Polk County</h5>
+                                <p>Independence, Monmouth, Dallas</p>
                             </div>
                         </div>
                     </details>

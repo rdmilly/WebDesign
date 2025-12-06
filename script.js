@@ -12,6 +12,127 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// SERVICE AREA MAP WITH RADIUS CIRCLE (Google Maps)
+// ========================================
+
+function initServiceAreaMap() {
+    // Check if map container exists
+    const mapContainer = document.getElementById('service-area-map');
+    if (!mapContainer) return;
+    
+    // Newberg, Oregon coordinates
+    const newbergLocation = { lat: 45.300118, lng: -122.973157 };
+    
+    // 30 miles in meters (30 * 1609.34)
+    const radiusInMeters = 48280;
+    
+    // Create the map with a clean, light style
+    const map = new google.maps.Map(mapContainer, {
+        center: newbergLocation,
+        zoom: 9,
+        mapTypeId: 'roadmap',
+        disableDefaultUI: false,
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: true,
+        styles: [
+            // Subtle, clean style that's easy to read
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [{ color: "#a3ccff" }]
+            },
+            {
+                featureType: "landscape",
+                elementType: "geometry",
+                stylers: [{ color: "#f5f5f5" }]
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry",
+                stylers: [{ color: "#ffffff" }]
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#dedede" }]
+            },
+            {
+                featureType: "road.arterial",
+                elementType: "geometry",
+                stylers: [{ color: "#ffffff" }]
+            },
+            {
+                featureType: "road.local",
+                elementType: "geometry",
+                stylers: [{ color: "#ffffff" }]
+            },
+            {
+                featureType: "poi",
+                elementType: "geometry",
+                stylers: [{ color: "#e5e5e5" }]
+            },
+            {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [{ color: "#c5e8c5" }]
+            },
+            {
+                featureType: "administrative",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#c9c9c9" }]
+            }
+        ]
+    });
+    
+    // Draw the 30-mile radius circle with golden/green brand colors
+    const serviceAreaCircle = new google.maps.Circle({
+        strokeColor: '#2C5530',
+        strokeOpacity: 0.9,
+        strokeWeight: 3,
+        fillColor: '#D4AF37',
+        fillOpacity: 0.2,
+        map: map,
+        center: newbergLocation,
+        radius: radiusInMeters
+    });
+    
+    // Add a marker for Newberg (home base)
+    const marker = new google.maps.Marker({
+        position: newbergLocation,
+        map: map,
+        title: 'PNWLights - Newberg, OR (Home Base)',
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 12,
+            fillColor: '#DC2626',
+            fillOpacity: 1,
+            strokeColor: '#FFFFFF',
+            strokeWeight: 3
+        }
+    });
+    
+    // Info window for marker
+    const infoWindow = new google.maps.InfoWindow({
+        content: `
+            <div style="padding: 10px; font-family: 'Open Sans', sans-serif;">
+                <strong style="font-size: 16px; color: #0A1628;">PNWLights Home Base</strong><br>
+                <span style="color: #666;">Newberg, OR</span><br>
+                <span style="color: #2C5530; font-weight: 600;">30-Mile Service Radius</span>
+            </div>
+        `
+    });
+    
+    marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+    });
+    
+    // Fit map to circle bounds
+    map.fitBounds(serviceAreaCircle.getBounds());
+}
+
+// ========================================
 // STICKY HEADER
 // ========================================
 
@@ -136,17 +257,41 @@ function initFAQAccordion() {
 // Alternative function for inline onclick (backward compatibility)
 function toggleFAQ(button) {
     const faqItem = button.closest('.faq-item');
+    const faqAnswer = faqItem.querySelector('.faq-answer');
+    const faqIcon = faqItem.querySelector('.faq-icon');
     const isActive = faqItem.classList.contains('active');
+    
+    // Ensure transition is set
+    faqAnswer.style.transition = 'max-height 0.4s ease-out';
+    faqAnswer.style.overflow = 'hidden';
 
     // Close all other FAQ items
     document.querySelectorAll('.faq-item').forEach(item => {
         if (item !== faqItem) {
             item.classList.remove('active');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            if (answer) {
+                answer.style.maxHeight = '0px';
+            }
+            if (icon) {
+                icon.style.transform = 'rotate(0deg)';
+            }
         }
     });
 
     // Toggle current item
-    faqItem.classList.toggle('active');
+    if (isActive) {
+        // Close it
+        faqItem.classList.remove('active');
+        faqAnswer.style.maxHeight = '0px';
+        if (faqIcon) faqIcon.style.transform = 'rotate(0deg)';
+    } else {
+        // Open it
+        faqItem.classList.add('active');
+        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+        if (faqIcon) faqIcon.style.transform = 'rotate(180deg)';
+    }
 }
 
 // ========================================
