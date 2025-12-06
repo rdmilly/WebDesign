@@ -3913,29 +3913,28 @@ body.modal-open {
     z-index: 0 !important;
 }
 
-/* Animated gradient border - sits behind everything */
+/* Animated gradient border */
 .faq-item::before {
     content: '' !important;
     position: absolute !important;
-    top: -3px !important;
-    left: -3px !important;
-    right: -3px !important;
-    bottom: -3px !important;
+    inset: -3px !important;
     background: linear-gradient(90deg,
-        rgba(255, 51, 51, 0.9),
-        rgba(51, 255, 51, 0.9),
-        rgba(255, 255, 51, 0.9),
-        rgba(51, 204, 255, 0.9),
-        rgba(255, 51, 51, 0.9),
-        rgba(51, 255, 51, 0.9),
-        rgba(255, 255, 51, 0.9),
-        rgba(51, 204, 255, 0.9),
-        rgba(255, 51, 51, 0.9)) !important;
-    background-size: 200% 100% !important;
+        #ff3333 0%,
+        #33ff33 25%,
+        #ffff33 50%,
+        #33ccff 75%,
+        #ff3333 100%) !important;
+    background-size: 300% 100% !important;
     border-radius: 11px !important;
     z-index: 1 !important;
-    animation: light-chase 4s linear infinite !important;
+    animation: faq-chase 2s linear infinite !important;
     pointer-events: none !important;
+}
+
+@keyframes faq-chase {
+    0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+    50% { background-position: 150% 50%; filter: hue-rotate(180deg); }
+    100% { background-position: 300% 50%; filter: hue-rotate(360deg); }
 }
 
 /* Dark background - covers most of the gradient, leaving border visible */
